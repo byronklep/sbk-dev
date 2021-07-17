@@ -1,8 +1,18 @@
 import { useState } from 'react'
 import { useRouter } from 'next/router'
+import { getProjects } from '../lib/data'
 import Layout from '../components/Layout'
 
-export default function Home(props) {
+export const getStaticProps = async () => {
+  const data = await getProjects()
+  return {
+    props: {
+      data,
+    },
+  }
+}
+
+export default function Home({ props, data }) {
   const [dropDown, setDropDown] = useState(false)
   const [text, setText] = useState('America')
 
@@ -11,6 +21,8 @@ export default function Home(props) {
   const dropdownHandler = () => {
     setDropDown(!dropDown)
   }
+
+  console.log(data)
 
   return (
     <Layout>
@@ -41,13 +53,6 @@ export default function Home(props) {
                 </p>
               </div>
               <div className="mt-12 border-b border-transparent ">
-                {/* <a
-                  href="#contact"
-                  className="tracking-wide focus:outline-none focus:text-gray-300 text-base font-bold leading-none  text-white no-underline">
-                  <button className="bg-indigo-700 p-3 rounded-xl no-underline">
-                    Lets get in touch
-                  </button>
-                </a> */}
                 <div className="flex flex-col mt-6 space-y-3 lg:space-y-0 md:flex-row">
                   <a
                     href="#contact"
