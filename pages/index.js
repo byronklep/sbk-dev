@@ -15,7 +15,7 @@ export default function Home(props) {
   return (
     <Layout>
       <section>
-        <div className="mx-auto container px-6 lg:px-14 xl:px-0">
+        <div className="mx-auto container md:mt-32 px-6 lg:px-14 xl:px-0">
           <div className="flex justify-between items-center flex-col xl:flex-row xl:space-x-12 space-y-16 xl:space-y-0">
             <div className="flex justify-start items-start flex-col ">
               <div>
@@ -40,91 +40,34 @@ export default function Home(props) {
                   want to help you with your next project!
                 </p>
               </div>
-              <div className="mt-12 border-b border-transparent hover:border-white pb-1">
-                <a
-                  href=""
-                  className="tracking-wide focus:outline-none focus:text-gray-300 text-base font-bold leading-none  text-white">
-                  <p>Lets get in touch</p>
-                </a>
+              <div className="mt-12 border-b border-transparent ">
+                {/* <a
+                  href="#contact"
+                  className="tracking-wide focus:outline-none focus:text-gray-300 text-base font-bold leading-none  text-white no-underline">
+                  <button className="bg-indigo-700 p-3 rounded-xl no-underline">
+                    Lets get in touch
+                  </button>
+                </a> */}
+                <div className="flex flex-col mt-6 space-y-3 lg:space-y-0 md:flex-row">
+                  <a
+                    href="#contact"
+                    className="block px-3 py-2 text-sm font-semibold text-center text-white transition-colors duration-200 transform bg-indigo-400 rounded-md hover:bg-green-400">
+                    Learn More
+                  </a>
+                  <a
+                    href="#"
+                    className="block px-3 py-2 text-sm font-semibold text-center text-white transition-colors duration-200 transform bg-pink-400 rounded-md lg:mx-4 hover:bg-blue-300">
+                    About
+                  </a>
+                </div>
               </div>
             </div>
-            <div className="flex justify-start items-start flex-col xl:w-8/12	">
-              <div>
-                <p className="text-lg font-bold leading-none text-white">
-                  Highlights
-                </p>
-              </div>
-              <div className="px-8 py-10 mt-4 bg-gray-800 flex  justify-start items-start flex-col rounded">
-                <div className="">
-                  <p className="text-xs font-medium leading-3 text-white">
-                    JAVASCRIPT
-                  </p>
-                </div>
-                <div className="md:mt-2">
-                  <p className="text-2xl md:text-3xl font-semibold lg:leading-7  text-white">
-                    Front-end architecture
-                  </p>
-                </div>
-                <div className="mt-2 md:mt-4 ">
-                  <p className="text-base leading-normal text-gray-300 ">
-                    It is a long established fact that a reader will be
-                    distracted by the readable content for remote Junior Web
-                    Developer for Coolor, located in Las Vegas
-                  </p>
-                </div>
-                <div className="mt-3 md:mt-6">
-                  <div className="inline-flex space-x-2 items-center justify-start w-40 h-4">
-                    <svg
-                      width="14"
-                      height="2"
-                      viewBox="0 0 14 2"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg">
-                      <rect width="14" height="2" fill="#9CA3AF" />
-                    </svg>
-
-                    <p className="text-base leading-none text-gray-400">
-                      Schinner Systems
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="px-8 py-10 mt-4 bg-gray-800 flex  justify-start items-start flex-col rounded">
-                <div className="">
-                  <p className="text-xs font-medium leading-3 text-white">
-                    JAVASCRIPT
-                  </p>
-                </div>
-                <div className="md:mt-2">
-                  <p className="text-2xl md:text-3xl font-semibold lg:leading-7 text-white">
-                    Building an MVP in react
-                  </p>
-                </div>
-                <div className="mt-2 md:mt-4 ">
-                  <p className="text-base leading-normal text-gray-300 ">
-                    It is a long established fact that a reader will be
-                    distracted by the readable content for remote Junior Web
-                    Developer for Coolor, located in Las Vegas
-                  </p>
-                </div>
-                <div className="mt-3 md:mt-6">
-                  <div className="inline-flex space-x-2 items-center justify-start w-40 h-4">
-                    <svg
-                      width="14"
-                      height="2"
-                      viewBox="0 0 14 2"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg">
-                      <rect width="14" height="2" fill="#9CA3AF" />
-                    </svg>
-
-                    <p className="text-base leading-none text-gray-400">
-                      {' '}
-                      Casper LLC
-                    </p>
-                  </div>
-                </div>
-              </div>
+            <div className="flex items-center justify-center w-full h-96 lg:w-1/2">
+              <img
+                className="object-cover w-full h-full max-w-2xl rounded-md"
+                src="https://images.unsplash.com/photo-1555181126-cf46a03827c0?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
+                alt="glasses photo"
+              />
             </div>
           </div>
         </div>
