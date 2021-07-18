@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { useRouter } from 'next/router'
+import Link from 'next/link'
 import { SiGmail } from 'react-icons/si'
 import { FaGitlab } from 'react-icons/fa'
 import { FaLinkedin } from 'react-icons/fa'
@@ -15,32 +16,36 @@ export default function Header() {
         <div className="hidden md:flex justify-between items-center pt-16 mb-12">
           <div className="flex flex-row items-center space-x-10">
             <div>
-              <a
-                onClick={() => router.push('/')}
-                className="cursor-pointer text-base hover:text-gray-300 focus:outline-none focus:text-gray-300 font-semibold leading-none text-white">
-                <p>Intro</p>
-              </a>
+              <Link href="/">
+                <a className="cursor-pointer text-base hover:text-gray-300 focus:outline-none focus:text-gray-300 font-semibold leading-none text-white">
+                  <p>Intro</p>
+                </a>
+              </Link>
             </div>
             <div>
-              <a
-                href="#client"
-                className="cursor-pointer text-base hover:text-gray-300 focus:outline-none focus:text-gray-300 font-semibold leading-none text-white">
-                <p>Clients</p>
-              </a>
+              <Link href="#client">
+                <a
+                  href="#"
+                  className="cursor-pointer text-base hover:text-gray-300 focus:outline-none focus:text-gray-300 font-semibold leading-none text-white">
+                  <p>Clients</p>
+                </a>
+              </Link>
             </div>
             <div>
-              <a
-                onClick={() => router.push('/work')}
-                className="cursor-pointer text-base hover:text-gray-300 focus:outline-none focus:text-gray-300 font-semibold leading-none text-white">
-                <p>Work</p>
-              </a>
+              <Link href="/work">
+                <a className="cursor-pointer text-base hover:text-gray-300 focus:outline-none focus:text-gray-300 font-semibold leading-none text-white">
+                  <p>Work</p>
+                </a>
+              </Link>
             </div>
             <div>
-              <a
-                href="#contact"
-                className="cursor-pointer text-base hover:text-gray-300 focus:outline-none focus:text-gray-300 font-semibold leading-none text-white">
-                <p>Contact</p>
-              </a>
+              <Link href="#contact">
+                <a
+                  href="#"
+                  className="cursor-pointer text-base hover:text-gray-300 focus:outline-none focus:text-gray-300 font-semibold leading-none text-white">
+                  <p>Contact</p>
+                </a>
+              </Link>
             </div>
           </div>
           <div className="flex justify-center items-center space-x-6">
@@ -251,11 +256,11 @@ export default function Header() {
                     <a className="cursor-pointer">
                       <div className="text-gray-800 pt-10">
                         <div className="flex items-center  hover:text-gray-300 text-base text-white">
-                          <a
-                            onClick={() => router.push('/')}
-                            className="focus:outline-none cursor-pointer">
-                            Intro
-                          </a>
+                          <Link href="/">
+                            <a className="focus:outline-none cursor-pointer">
+                              Intro
+                            </a>
+                          </Link>
                         </div>
                       </div>
                     </a>
@@ -265,11 +270,11 @@ export default function Header() {
                       <div className="text-gray-800 pt-8">
                         <div className="flex items-center">
                           <div className="flex items-center hover:text-gray-300 text-base text-white">
-                            <a
-                              href="#client"
-                              className="focus:outline-none  cursor-pointer ">
-                              Clients
-                            </a>
+                            <Link href="#client">
+                              <a className="focus:outline-none  cursor-pointer ">
+                                Clients
+                              </a>
+                            </Link>
                           </div>
                         </div>
                       </div>
@@ -279,11 +284,11 @@ export default function Header() {
                     <a className="cursor-pointer">
                       <div className="text-gray-800 pt-8">
                         <div className="flex items-center  hover:text-gray-300 text-base text-white">
-                          <a
-                            onClick={() => router.push('/work')}
-                            className="focus:outline-none cursor-pointer ">
-                            Work
-                          </a>
+                          <Link href="/work">
+                            <a className="focus:outline-none cursor-pointer ">
+                              Work
+                            </a>
+                          </Link>
                         </div>
                       </div>
                     </a>
@@ -292,11 +297,11 @@ export default function Header() {
                     <div className="flex items-center ">
                       <div className="flex items-center  hover:text-gray-300 text-base text-white">
                         <div className="w-6 h-6 md:w-8 md:h-8 ">
-                          <a
-                            href="#contact"
-                            className="focus:outline-none cursor-pointer ">
-                            Contact
-                          </a>
+                          <Link href="#contact">
+                            <a className="focus:outline-none cursor-pointer ">
+                              Contact
+                            </a>
+                          </Link>
                         </div>
                       </div>
                     </div>

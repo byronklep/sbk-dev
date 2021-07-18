@@ -2,6 +2,8 @@ import { useState } from 'react'
 import { useRouter } from 'next/router'
 import { getProjects } from '../lib/data'
 import Layout from '../components/Layout'
+import { SiAboutDotMe } from 'react-icons/fc'
+import Link from 'next/link'
 
 export const getStaticProps = async () => {
   const data = await getProjects()
@@ -59,11 +61,13 @@ export default function Home({ props, data }) {
                     className="block px-3 py-2 text-sm font-semibold text-center text-white transition-colors duration-200 transform bg-indigo-400 rounded-md hover:bg-green-400">
                     Learn More
                   </a>
-                  <a
-                    href="#"
-                    className="block px-3 py-2 text-sm font-semibold text-center text-white transition-colors duration-200 transform bg-pink-400 rounded-md lg:mx-4 hover:bg-blue-300">
-                    About
-                  </a>
+                  <Link href="/about">
+                    <a
+                      href="#"
+                      className="block px-3 py-2 text-sm font-semibold text-center text-white transition-colors duration-200 transform bg-pink-400 rounded-md lg:mx-4 hover:bg-blue-300">
+                      About Me
+                    </a>
+                  </Link>
                 </div>
               </div>
             </div>
