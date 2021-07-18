@@ -18,16 +18,16 @@ export default function Header() {
             <div>
               <Link href="/">
                 <a className="cursor-pointer text-base hover:text-gray-300 focus:outline-none focus:text-gray-300 font-semibold leading-none text-white">
-                  <p>Intro</p>
+                  <p>Home</p>
                 </a>
               </Link>
             </div>
             <div>
-              <Link href="#client">
+              <Link href="/about">
                 <a
                   href="#"
                   className="cursor-pointer text-base hover:text-gray-300 focus:outline-none focus:text-gray-300 font-semibold leading-none text-white">
-                  <p>Clients</p>
+                  <p>About</p>
                 </a>
               </Link>
             </div>
@@ -39,10 +39,8 @@ export default function Header() {
               </Link>
             </div>
             <div>
-              <Link href="#contact">
-                <a
-                  href="#"
-                  className="cursor-pointer text-base hover:text-gray-300 focus:outline-none focus:text-gray-300 font-semibold leading-none text-white">
+              <Link href="/contact">
+                <a className="cursor-pointer text-base hover:text-gray-300 focus:outline-none focus:text-gray-300 font-semibold leading-none text-white">
                   <p>Contact</p>
                 </a>
               </Link>
@@ -258,7 +256,7 @@ export default function Header() {
                         <div className="flex items-center  hover:text-gray-300 text-base text-white">
                           <Link href="/">
                             <a className="focus:outline-none cursor-pointer">
-                              Intro
+                              Home
                             </a>
                           </Link>
                         </div>
@@ -270,9 +268,9 @@ export default function Header() {
                       <div className="text-gray-800 pt-8">
                         <div className="flex items-center">
                           <div className="flex items-center hover:text-gray-300 text-base text-white">
-                            <Link href="#client">
+                            <Link href="/about">
                               <a className="focus:outline-none  cursor-pointer ">
-                                Clients
+                                About
                               </a>
                             </Link>
                           </div>
@@ -297,7 +295,7 @@ export default function Header() {
                     <div className="flex items-center ">
                       <div className="flex items-center  hover:text-gray-300 text-base text-white">
                         <div className="w-6 h-6 md:w-8 md:h-8 ">
-                          <Link href="#contact">
+                          <Link href="/contact">
                             <a className="focus:outline-none cursor-pointer ">
                               Contact
                             </a>
