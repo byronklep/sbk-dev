@@ -300,7 +300,7 @@ export default function Home({ props, data }) {
               <div
                 key={project.slug}
                 className="w-full xl:w-72 flex flex-col justify-between items-start p-3 md:p-6 bg-gray-800 rounded">
-                <div lassName="w-full">
+                <div className="w-full">
                   <div className="w-full">
                     <img
                       className="w-full"
@@ -407,7 +407,9 @@ export default function Home({ props, data }) {
             </div> */}
             <div className="hidden xl:block flex flex-col justify-end text-right items-end w-80">
               <div className="">
-                <h1 className="text-6xl font-extrabold  text-white">Work</h1>
+                <Link href="/work" passHref>
+                  <h1 className="text-6xl font-extrabold  text-white">Work</h1>
+                </Link>
               </div>
               <div className="mt-8  ">
                 <p className="text-base leading-normal text-gray-400 ">
