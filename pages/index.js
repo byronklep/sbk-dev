@@ -4,6 +4,7 @@ import { getProjects } from '../lib/data'
 import Layout from '../components/Layout'
 import { SiAboutDotMe } from 'react-icons/fc'
 import Link from 'next/link'
+import Truncate from 'react-truncate'
 
 export const getStaticProps = async () => {
   const data = await getProjects()
@@ -295,38 +296,56 @@ export default function Home({ props, data }) {
             </div>
           </div>
           <div className="w-full items-center grid xl:grid-cols-4 md:grid-cols-3 grid-cols-1 xl:gap-x-6 gap-x-4 md:gap-x-6 mt-16 xl:mt-0 gap-y-4 md:gap-y-0">
-            <div className="w-full xl:w-72 flex flex-col justify-between items-start p-3 md:p-6 bg-gray-800 rounded">
-              <div className="w-full">
-                <div className="w-full">
-                  <img
-                    className="w-full"
-                    src={
-                      'https://cdn.tuk.dev/assets/templates/portfolio/rectangle.png'
-                    }
-                    alt="spider-web"
-                  />
+            {data.projects.map((project, slug) => (
+              <div
+                key={project.slug}
+                className="w-full xl:w-72 flex flex-col justify-between items-start p-3 md:p-6 bg-gray-800 rounded">
+                <div lassName="w-full">
+                  <div className="w-full">
+                    <img
+                      className="w-full"
+                      src={project.image.url}
+                      height={project.image.height}
+                      width={project.image.width}
+                      alt="spider-web"
+                    />
+                  </div>
+                  <div className="md:mt-6 mt-4">
+                    <p className="text-xs font-medium leading-3 text-white">
+                      {project.title}
+                    </p>
+                  </div>
+                  <div className="md:mt-4 mt-2">
+                    <p className="xl:w-60 text-base md:text-2xl font-semibold text-white">
+                      <Truncate
+                        lines={3}
+                        ellipsis={
+                          <span>
+                            ...{' '}
+                            <a
+                              className="text-pink-400 hover:text-pink-300"
+                              href="/link/to/article">
+                              Read more
+                            </a>
+                          </span>
+                        }>
+                        {project.description}
+                      </Truncate>
+                    </p>
+                  </div>
                 </div>
-                <div className="md:mt-6 mt-4">
-                  <p className="text-xs font-medium leading-3 text-white">
-                    JAVASCRIPT
-                  </p>
-                </div>
-                <div className="md:mt-4 mt-2">
-                  <p className="xl:w-60 text-base md:text-2xl font-semibold text-white">
-                    Building an Interactive Showcase with Vue.js & Vue Instant
-                    Search{' '}
-                  </p>
+
+                <div className="mt-4">
+                  <a
+                    onClick={() => router.push('/projectInner')}
+                    className="cursor-pointer focus:outline-none focus:underline text-xs leading-3 hover:underline focus:underline text-gray-300">
+                    <p className="">Go to project</p>
+                  </a>
                 </div>
               </div>
-              <div className="mt-4">
-                <a
-                  onClick={() => router.push('/projectInner')}
-                  className="cursor-pointer focus:outline-none focus:underline text-xs leading-3 hover:underline focus:underline text-gray-300">
-                  <p className="">Go to project</p>
-                </a>
-              </div>
-            </div>
-            <div className="w-full xl:w-72 flex flex-col justify-between items-start h-full p-3 md:p-6 bg-gray-800 rounded">
+            ))}
+
+            {/* <div className="w-full xl:w-72 flex flex-col justify-between items-start h-full p-3 md:p-6 bg-gray-800 rounded">
               <div className="w-full">
                 <div className="w-full">
                   <img
@@ -385,7 +404,7 @@ export default function Home({ props, data }) {
                   <p className="">Go to project</p>
                 </a>
               </div>
-            </div>
+            </div> */}
             <div className="hidden xl:block flex flex-col justify-end text-right items-end w-80">
               <div className="">
                 <h1 className="text-6xl font-extrabold  text-white">Work</h1>
