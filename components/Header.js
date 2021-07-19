@@ -36,9 +36,7 @@ export default function Header() {
             </div>
             <div>
               <Link href="/about">
-                <a
-                  href="#"
-                  className="cursor-pointer text-base hover:text-gray-300 focus:outline-none focus:text-gray-300 font-semibold leading-none text-white">
+                <a className="cursor-pointer text-base hover:text-gray-300 focus:outline-none focus:text-gray-300 font-semibold leading-none text-white">
                   <p>About</p>
                 </a>
               </Link>
@@ -69,19 +67,37 @@ export default function Header() {
               </button>
             </div>
             <div className="flex justify-center items-center rounded-lg">
-              <button className="text-white text-2xl hover:text-gray-300 focus:outline-none focus:text-gray-300">
-                <SiGmail height={32} width={32} />
-              </button>
+              <a
+                href="mailto:sam@samklepper.com"
+                aria-label="Gmail"
+                target="_blank"
+                rel="noreferrer">
+                <button className="text-white text-2xl hover:text-gray-300 focus:outline-none focus:text-gray-300">
+                  <SiGmail height={32} width={32} />
+                </button>
+              </a>
             </div>
             <div className="flex justify-center items-center rounded-lg">
-              <button className="text-white text-2xl hover:text-gray-300 focus:outline-none focus:text-gray-300">
-                <FaGitlab height={32} width={32} />
-              </button>
+              <a
+                href="https://gitlab.com/bklep"
+                aria-label="Gitlab"
+                target="_blank"
+                rel="noreferrer">
+                <button className="text-white text-2xl hover:text-gray-300 focus:outline-none focus:text-gray-300">
+                  <FaGitlab height={32} width={32} />
+                </button>
+              </a>
             </div>
             <div className="flex justify-center items-center rounded-lg">
-              <button className="text-white text-2xl hover:text-gray-300 focus:outline-none focus:text-gray-300">
-                <FaLinkedin height={32} width={32} />
-              </button>
+              <a
+                href="https://www.linkedin.com/in/samuel-klepper-0435b5193/"
+                aria-label="Linkedin"
+                target="_blank"
+                rel="noreferrer">
+                <button className="text-white text-2xl hover:text-gray-300 focus:outline-none focus:text-gray-300">
+                  <FaLinkedin height={32} width={32} />
+                </button>
+              </a>
             </div>
           </div>
         </div>
