@@ -1,14 +1,14 @@
 import { useState } from 'react'
 import { useRouter } from 'next/router'
 import Image from 'next/image'
-import { getProjects } from '../lib/data'
+import { getProjectsHome } from '../lib/data'
 import Layout from '../components/Layout'
 import { SiAboutDotMe } from 'react-icons/fc'
 import Link from 'next/link'
 import Truncate from 'react-truncate'
 
 export const getStaticProps = async () => {
-  const data = await getProjects()
+  const data = await getProjectsHome()
   return {
     props: {
       data,
