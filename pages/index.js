@@ -104,18 +104,23 @@ export default function Home({ props, data }) {
               </div>
               <div className="md:mt-8 mt-4">
                 <p className="text-base leading-normal text-gray-400 xl:w-64">
-                  I am a Web Developer located in Hartford, Connecticut. I
-                  currently work as a part time Remote Junior Web Developer for
-                  Coolor, located in Las Vegas. It is a long established fact
-                  that a reader will be distracted by the readable content{' '}
+                  I have partnered with many local companines and small
+                  businesses to help them make their vision come to fruition.
+                  Here are a few of the partners I&apos;ve worked with.
                 </p>
               </div>
             </div>
             <div className="grid md:grid-cols-3 grid-cols-2 justify-around w-full items-center gap-x-4 md:gap-x-36 gap-y-10 md:gap-y-0 ">
               <div className="w-48 flex flex-col justify-start items-start ">
                 <div className="flex  justify-start items-start flex-col">
-                  <div className="md:w-20 w-14">
-                    <svg
+                  <div className="md:w-24 w-16">
+                    <Image
+                      src="/images/deleon-logo-white.png"
+                      alt="DeLeon Safety Solutions"
+                      height={100}
+                      width={100}
+                    />
+                    {/* <svg
                       viewBox="0 0 84 64"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg">
@@ -125,11 +130,11 @@ export default function Home({ props, data }) {
                         d="M0 0L52 64C69.6731 64 84 49.6731 84 32C84 14.3269 69.6731 0 52 0H0ZM55.591 55.7332C67.1424 54.0001 76 44.0344 76 32C76 18.7452 65.2548 8 52 8H38.8333C44.5338 14.3691 48 22.7797 48 32C48 36.1698 47.2896 40.1782 45.9828 43.9078L55.591 55.7332ZM39.6927 36.1661C39.8951 34.8075 40 33.4164 40 32C40 21.8147 34.5617 12.8996 26.4303 8H16.8078L39.6927 36.1661Z"
                         fill="white"
                       />
-                    </svg>
+                    </svg> */}
                   </div>
                   <div className="mt-4">
                     <p className="text-lg md:text-2xl font-semibold lg:leading-6 text-white">
-                      Breitenberg Inc
+                      DeLeon Safety
                     </p>
                   </div>
                 </div>
