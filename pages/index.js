@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { useRouter } from 'next/router'
+import Image from 'next/image'
 import { getProjects } from '../lib/data'
 import Layout from '../components/Layout'
 import { SiAboutDotMe } from 'react-icons/fc'
@@ -73,11 +74,20 @@ export default function Home({ props, data }) {
               </div>
             </div>
             <div className="flex items-center justify-center w-full h-96 lg:w-1/2">
-              <img
+              <Image
+                className="object-cover w-full h-full max-w-2xl rounded-md"
+                src="https://images.unsplash.com/photo-1555181126-cf46a03827c0?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
+                height={384}
+                width={672}
+                alt="glasses photo"
+                placeholder="blur"
+                blurDataURL
+              />
+              {/* <img
                 className="object-cover w-full h-full max-w-2xl rounded-md"
                 src="https://images.unsplash.com/photo-1555181126-cf46a03827c0?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
                 alt="glasses photo"
-              />
+              /> */}
             </div>
           </div>
         </div>
@@ -302,12 +312,14 @@ export default function Home({ props, data }) {
                 className="w-full xl:w-72 flex flex-col justify-between items-start p-3 md:p-6 bg-gray-800 rounded">
                 <div className="w-full">
                   <div className="w-full">
-                    <img
-                      className="w-full"
+                    <Image
+                      className="w-full rounded"
                       src={project.image.url}
                       height={project.image.height}
                       width={project.image.width}
                       alt="spider-web"
+                      placeholder="blur"
+                      blurDataURL
                     />
                   </div>
                   <div className="md:mt-6 mt-4">
