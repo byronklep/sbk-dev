@@ -15,13 +15,17 @@ export default function Header() {
         <div className="hidden md:flex justify-between items-center pt-16 mb-12">
           <div className="flex flex-row items-center space-x-10">
             <div>
-              <img
-                className=""
-                src="/images/sbk-logo-white.svg"
-                alt="SbK logo"
-                height={90}
-                width={90}
-              />
+              <Link href="/" passHref>
+                <a>
+                  <img
+                    className=""
+                    src="/images/sbk-logo-white.svg"
+                    alt="SbK logo"
+                    height={90}
+                    width={90}
+                  />
+                </a>
+              </Link>
             </div>
             <div>
               <Link href="/">
@@ -57,7 +61,11 @@ export default function Header() {
           <div className="flex justify-center items-center space-x-6">
             <div className="flex justify-center items-center rounded-lg">
               <button className="text-white text-2xl hover:text-gray-300 focus:outline-none focus:text-gray-300">
-                <SiReadthedocs height={32} width={32} />
+                <Link href="/images/resume.pdf">
+                  <a target="_blank" rel="noreferrer">
+                    <SiReadthedocs height={32} width={32} />
+                  </a>
+                </Link>
               </button>
             </div>
             <div className="flex justify-center items-center rounded-lg">
@@ -127,22 +135,44 @@ export default function Header() {
           <div className="flex justify-center items-center space-x-6">
             <div className="flex justify-center items-center rounded-lg">
               <button className="hover:text-gray-300 focus:outline-none focus:text-gray-300 text-white text-2xl">
-                <SiReadthedocs height={32} width={32} />
+                <Link href="/images/resume.pdf">
+                  <a target="_blank" rel="noreferrer">
+                    <SiReadthedocs height={32} width={32} />
+                  </a>
+                </Link>
               </button>
             </div>
             <div className="flex justify-center items-center rounded-lg">
               <button className="hover:text-gray-300 focus:outline-none focus:text-gray-300 text-white text-2xl">
-                <SiGmail height={32} width={32} />
+                <a
+                  href="mailto:sam@samklepper.com"
+                  aria-label="Gmail"
+                  target="_blank"
+                  rel="noreferrer">
+                  <SiGmail height={32} width={32} />
+                </a>
               </button>
             </div>
             <div className="flex justify-center items-center rounded-lg">
               <button className="hover:text-gray-300 focus:outline-none focus:text-gray-300 text-white text-2xl">
-                <FaGitlab height={32} width={32} />
+                <a
+                  href="https://gitlab.com/bklep"
+                  aria-label="Gitlab"
+                  target="_blank"
+                  rel="noreferrer">
+                  <FaGitlab height={32} width={32} />
+                </a>
               </button>
             </div>
             <div className="flex justify-center items-center rounded-lg">
               <button className="hover:text-gray-300 focus:outline-none focus:text-gray-300 text-white text-2xl">
-                <FaLinkedin height={32} width={32} />
+                <a
+                  href="https://www.linkedin.com/in/samuel-klepper-0435b5193/"
+                  aria-label="Linkedin"
+                  target="_blank"
+                  rel="noreferrer">
+                  <FaLinkedin height={32} width={32} />
+                </a>
               </button>
             </div>
           </div>
@@ -166,11 +196,15 @@ export default function Header() {
                 <div className="border-b border-gray-300  flex justify-between items-center">
                   <div className="w-20 text-white">
                     {/* SVG Logo */}
-                    <img
-                      className="fill-current text-green-600"
-                      src="/images/sbk-logo-white.svg"
-                      alt="SbK logo"
-                    />
+                    <Link href="/">
+                      <a>
+                        <img
+                          className="fill-current text-green-600"
+                          src="/images/sbk-logo-white.svg"
+                          alt="SbK logo"
+                        />
+                      </a>
+                    </Link>
 
                     {/* <svg
                       viewBox="0 0 63 63"

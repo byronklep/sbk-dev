@@ -336,7 +336,7 @@ export default function Home({ props, data }) {
                             ...{' '}
                             <a
                               className="text-pink-400 hover:text-pink-300"
-                              href="/link/to/article">
+                              href={`/work/${project.slug}`}>
                               Read more
                             </a>
                           </span>
