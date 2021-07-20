@@ -6,6 +6,7 @@ import Layout from '../components/Layout'
 import { SiAboutDotMe } from 'react-icons/fc'
 import Link from 'next/link'
 import Truncate from 'react-truncate'
+// import deLeon from '/images/partners/deleon-logo-white.png'
 
 export const getStaticProps = async () => {
   const data = await getProjectsHome()
@@ -51,9 +52,9 @@ export default function Home({ props, data }) {
               <div className="md:mt-4 mt-2">
                 <p className="text-base leading-normal text-gray-400 xl:w-96">
                   I am a Full Stack Web Developer from Houston, TX. I currently
-                  work as a freelance dev but have experience working for local
-                  small businesses and startups. I have a passion for tech and
-                  want to help you with your next project!
+                  work as a freelance developer but have experience working for
+                  local small businesses and startups. I have a passion for tech
+                  and want to help you with your next project!
                 </p>
               </div>
               <div className="mt-12 border-b border-transparent ">
@@ -104,7 +105,7 @@ export default function Home({ props, data }) {
               </div>
               <div className="md:mt-8 mt-4">
                 <p className="text-base leading-normal text-gray-400 xl:w-64">
-                  I have partnered with many local companines and small
+                  I have partnered with some local companines and small
                   businesses to help them make their vision come to fruition.
                   Here are a few of the partners I&apos;ve worked with.
                 </p>
@@ -113,9 +114,9 @@ export default function Home({ props, data }) {
             <div className="grid md:grid-cols-3 grid-cols-2 justify-around w-full items-center gap-x-4 md:gap-x-36 gap-y-10 md:gap-y-0 ">
               <div className="w-48 flex flex-col justify-start items-start ">
                 <div className="flex  justify-start items-start flex-col">
-                  <div className="md:w-24 w-16">
+                  <div className="md:w-32 w-16">
                     <Image
-                      src="/images/deleon-logo-white.png"
+                      src="/images/partners/deleon-logo-white.png"
                       alt="DeLeon Safety Solutions"
                       height={100}
                       width={100}
@@ -132,15 +133,21 @@ export default function Home({ props, data }) {
                       />
                     </svg> */}
                   </div>
-                  <div className="mt-4">
+                  <div className="mt-1">
                     <p className="text-lg md:text-2xl font-semibold lg:leading-6 text-white">
                       DeLeon Safety
                     </p>
                   </div>
                 </div>
                 <div className="flex mt-9  justify-start items-start flex-col">
-                  <div className="md:w-10 w-6">
-                    <svg
+                  <div className="md:w-32 w-16">
+                    <Image
+                      src="/images/partners/ultra-logo-white.png"
+                      alt="Ultra Demolition"
+                      height={100}
+                      width={150}
+                    />
+                    {/* <svg
                       viewBox="0 0 39 63"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg">
@@ -151,19 +158,25 @@ export default function Home({ props, data }) {
                         strokeLinecap="round"
                         strokeLinejoin="round"
                       />
-                    </svg>
+                    </svg> */}
                   </div>
-                  <div className="mt-4">
+                  <div className="mt-1">
                     <p className="text-lg md:text-2xl font-semibold lg:leading-6 text-white">
-                      Trantow
+                      Ultra Demolition
                     </p>
                   </div>
                 </div>
               </div>
               <div className="w-48 flex flex-col justify-start items-start ">
                 <div className="flex  justify-start items-start flex-col">
-                  <div className="md:w-24 w-16">
-                    <svg
+                  <div className="md:w-32 w-16">
+                    <Image
+                      src="/images/partners/edge-logo-white.png"
+                      alt="Edge196"
+                      height={80}
+                      width={80}
+                    />
+                    {/* <svg
                       viewBox="0 0 102 64"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg">
@@ -171,17 +184,23 @@ export default function Home({ props, data }) {
                         d="M0 34.1103C0.06616 50.5375 13.4522 64 29.8964 64C46.3811 64 59.7919 50.5918 59.7919 34.1103V29.8907C59.7919 23.1042 65.3148 17.5824 72.1026 17.5824C78.8914 17.5824 84.4133 23.1042 84.4133 29.8907C84.4133 31.8327 85.9883 33.4074 87.9306 33.4074H98.4827C100.426 33.4074 102 31.8327 102 29.8907C102 13.4091 88.5893 0 72.1036 0C55.6189 0 42.2071 13.4091 42.2071 29.8907V34.1103C42.2071 40.8978 36.6843 46.4176 29.8974 46.4176C23.1096 46.4176 17.5867 40.8978 17.5867 34.1103C17.5867 32.1683 16.0117 30.5936 14.0694 30.5936H3.51734C1.575 30.5946 0 32.1683 0 34.1103Z"
                         fill="white"
                       />
-                    </svg>
+                    </svg> */}
                   </div>
                   <div className="mt-4">
                     <p className="text-lg md:text-2xl font-semibold lg:leading-6 text-white">
-                      Cummings LLC
+                      Edge196
                     </p>
                   </div>
                 </div>
                 <div className="flex mt-9  justify-start items-start flex-col">
-                  <div className="md:w-12 w-8">
-                    <svg
+                  <div className="md:w-32 w-16">
+                    <Image
+                      src="/images/partners/tlwc-logo-white.png"
+                      alt="TLWC"
+                      height={80}
+                      width={80}
+                    />
+                    {/* <svg
                       viewBox="0 0 48 63"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg">
@@ -192,19 +211,25 @@ export default function Home({ props, data }) {
                         strokeLinecap="square"
                         strokeLinejoin="round"
                       />
-                    </svg>
+                    </svg> */}
                   </div>
                   <div className="mt-4">
                     <p className="text-lg md:text-2xl font-semibold lg:leading-6 text-white">
-                      Systems ltd
+                      TLWC
                     </p>
                   </div>
                 </div>
               </div>
               <div className="w-48 flex flex-col justify-start items-start ">
                 <div className="flex  justify-start items-start flex-col">
-                  <div className="md:w-16 w-10">
-                    <svg
+                  <div className="md:w-32 w-16">
+                    <Image
+                      src="/images/partners/hackmania-logo-white.png"
+                      alt="Hackmania"
+                      height={80}
+                      width={80}
+                    />
+                    {/* <svg
                       viewBox="0 0 63 63"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg">
@@ -212,17 +237,23 @@ export default function Home({ props, data }) {
                         d="M2 31.5L0 31.5L2 31.5ZM13.0625 31.5L11.0625 31.5L13.0625 31.5ZM31.5 49.9375L31.5 51.9375L31.5 49.9375ZM49.9375 31.5L51.9375 31.5L49.9375 31.5ZM31.5 0C23.1457 0 15.1335 3.31874 9.22614 9.22614L12.0546 12.0546C17.2118 6.89731 24.2065 4 31.5 4V0ZM9.22614 9.22614C3.31874 15.1335 0 23.1457 0 31.5L4 31.5C4 24.2065 6.89731 17.2118 12.0546 12.0546L9.22614 9.22614ZM0 31.5C0 39.8543 3.31874 47.8665 9.22614 53.7739L12.0546 50.9454C6.89731 45.7882 4 38.7935 4 31.5L0 31.5ZM9.22614 53.7739C15.1335 59.6813 23.1457 63 31.5 63V59C24.2065 59 17.2118 56.1027 12.0546 50.9454L9.22614 53.7739ZM31.5 63C39.8543 63 47.8665 59.6813 53.7739 53.7739L50.9454 50.9454C45.7882 56.1027 38.7935 59 31.5 59V63ZM53.7739 53.7739C59.6813 47.8665 63 39.8543 63 31.5H59C59 38.7935 56.1027 45.7882 50.9454 50.9454L53.7739 53.7739ZM63 31.5C63 23.1457 59.6813 15.1335 53.7739 9.22614L50.9454 12.0546C56.1027 17.2118 59 24.2065 59 31.5H63ZM53.7739 9.22614C47.8665 3.31874 39.8543 0 31.5 0V4C38.7935 4 45.7882 6.89731 50.9454 12.0546L53.7739 9.22614ZM31.5 11.0625C26.0796 11.0625 20.8813 13.2157 17.0485 17.0485L19.8769 19.8769C22.9596 16.7943 27.1405 15.0625 31.5 15.0625L31.5 11.0625ZM17.0485 17.0485C13.2157 20.8813 11.0625 26.0796 11.0625 31.5L15.0625 31.5C15.0625 27.1405 16.7943 22.9596 19.8769 19.8769L17.0485 17.0485ZM11.0625 31.5C11.0625 36.9204 13.2157 42.1187 17.0485 45.9515L19.8769 43.1231C16.7943 40.0404 15.0625 35.8595 15.0625 31.5L11.0625 31.5ZM17.0485 45.9515C20.8813 49.7843 26.0796 51.9375 31.5 51.9375L31.5 47.9375C27.1405 47.9375 22.9596 46.2057 19.8769 43.1231L17.0485 45.9515ZM31.5 51.9375C36.9204 51.9375 42.1187 49.7843 45.9515 45.9515L43.1231 43.1231C40.0404 46.2057 35.8595 47.9375 31.5 47.9375L31.5 51.9375ZM45.9515 45.9515C49.7843 42.1187 51.9375 36.9204 51.9375 31.5L47.9375 31.5C47.9375 35.8595 46.2057 40.0404 43.1231 43.1231L45.9515 45.9515ZM51.9375 31.5C51.9375 26.0796 49.7843 20.8813 45.9515 17.0485L43.1231 19.8769C46.2057 22.9596 47.9375 27.1405 47.9375 31.5L51.9375 31.5ZM45.9515 17.0485C42.1187 13.2157 36.9204 11.0625 31.5 11.0625L31.5 15.0625C35.8595 15.0625 40.0404 16.7943 43.1231 19.8769L45.9515 17.0485ZM19.1881 15.1883C12.691 20.3859 8.9769 26.6947 8.30509 34.0846C7.63993 41.4012 9.98264 49.5007 15.0135 58.3048L18.4865 56.3202C13.684 47.9159 11.7246 40.6508 12.2887 34.4467C12.846 28.3157 15.8923 22.9474 21.6869 18.3117L19.1881 15.1883ZM43.8119 47.8117C50.3006 42.6208 54.0216 36.3813 54.6947 29.0496C55.3609 21.7936 53.0141 13.7583 47.9865 4.95989L44.5135 6.94444C49.3192 15.3544 51.2745 22.5513 50.7115 28.6839C50.1554 34.7407 47.1161 40.0459 41.3131 44.6883L43.8119 47.8117Z"
                         fill="white"
                       />
-                    </svg>
+                    </svg> */}
                   </div>
-                  <div className="mt-4">
+                  <div className="mt-1">
                     <p className="text-xl md:text-2xl font-semibold lg:leading-6 text-white">
-                      RempelProhas{' '}
+                      Hackmania
                     </p>
                   </div>
                 </div>
                 <div className="hidden md:flex mt-9  justify-start items-start flex-col">
-                  <div className="md:w-16 w-10">
-                    <svg
+                  <div className="md:w-32 w-16">
+                    <Image
+                      src="/images/partners/mhp-logo-white.png"
+                      alt="Hackmania"
+                      height={80}
+                      width={120}
+                    />
+                    {/* <svg
                       viewBox="0 0 63 59"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg">
@@ -233,19 +264,25 @@ export default function Home({ props, data }) {
                         strokeLinecap="round"
                         strokeLinejoin="round"
                       />
-                    </svg>
+                    </svg> */}
                   </div>
                   <div className="mt-4">
                     <p className="text-xl md:text-2xl font-semibold lg:leading-6 text-white">
-                      Turcotte Co
+                      MH Photography
                     </p>
                   </div>
                 </div>
               </div>
               <div className="md:hidden w-48 flex flex-col justify-start items-start ">
                 <div className="flex   justify-start items-start flex-col">
-                  <div className="md:w-16 w-10">
-                    <svg
+                  <div className="md:w-32 w-32">
+                    <Image
+                      src="/images/partners/dcrafts-logo-white.png"
+                      alt="Digital Crafts"
+                      height={80}
+                      width={120}
+                    />
+                    {/* <svg
                       viewBox="0 0 63 59"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg">
@@ -256,11 +293,11 @@ export default function Home({ props, data }) {
                         strokeLinecap="round"
                         strokeLinejoin="round"
                       />
-                    </svg>
+                    </svg> */}
                   </div>
-                  <div className="mt-4">
+                  <div className="mt-1">
                     <p className="text-xl md:text-2xl font-semibold lg:leading-6 text-white">
-                      Turcotte Co
+                      Digital Crafts
                     </p>
                   </div>
                 </div>
