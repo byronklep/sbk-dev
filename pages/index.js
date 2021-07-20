@@ -51,10 +51,12 @@ export default function Home({ props, data }) {
               </div>
               <div className="md:mt-4 mt-2">
                 <p className="text-base leading-normal text-gray-400 xl:w-96">
-                  I am a Full Stack Web Developer from Houston, TX. I currently
-                  work as a freelance developer but have experience working for
-                  local small businesses and startups. I have a passion for tech
-                  and want to help you build your next project!
+                  I am a Full Stack Web Developer out of Houston, TX with over{' '}
+                  <strong>three</strong> years experience. I currently work as a
+                  freelance developer but have experience working for local
+                  small businesses and startups as well. I have a passion for
+                  programming and technology in general, and want to help you
+                  build your next project!
                 </p>
               </div>
               <div className="mt-12 border-b border-transparent ">
