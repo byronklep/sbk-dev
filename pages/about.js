@@ -1,13 +1,12 @@
 import Layout from '../components/Layout'
+import Profile from '../components/Profile'
 import AboutHeader from '../components/AboutHeader'
-// import Modal from '../components/Modal'
 
 export default function about() {
   return (
     <Layout title="About Sam Klepper">
-      <AboutHeader />
-      
-
+      {/* <AboutHeader /> */}
+      <Profile />
       <section className="bg-dark-gray-900 dark:bg-gray-800">
         <div className="container px-6 py-8 mx-auto">
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
