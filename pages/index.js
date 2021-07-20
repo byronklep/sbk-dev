@@ -348,7 +348,7 @@ export default function Home({ props, data }) {
             </div>
           </div>
           <div className="w-full items-center grid xl:grid-cols-4 md:grid-cols-3 grid-cols-1 xl:gap-x-6 gap-x-4 md:gap-x-6 mt-16 xl:mt-0 gap-y-4 md:gap-y-0">
-            {data.projects.map((project, slug) => (
+            {data.projects.map((project) => (
               <div
                 key={project.slug}
                 className="w-full xl:w-72 flex flex-col justify-between items-start p-3 md:p-6 bg-gray-800 rounded">

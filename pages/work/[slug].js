@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import Layout from '../../components/Layout'
-import { getProject, getProjectSlugs } from '../../lib/data'
+import { getProject, getProjectSlugs, getProjectsWork } from '../../lib/data'
 
 import he from 'he'
 import { MDXRemote } from 'next-mdx-remote'
@@ -11,7 +11,8 @@ export const getStaticPaths = async () => {
   const slugRes = await getProjectSlugs()
   const slugs = slugRes.projects
 
-  console.log(slugs)
+  // console.log(slugs)
+  // console.log(fourProjects)
 
   return {
     paths: slugs.map((slug) => ({ params: { slug: slug.slug } })),
@@ -21,17 +22,20 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps = async ({ params }) => {
   const project = await getProject(params.slug)
+  const fourProjects = await getProjectsWork()
 
   return {
     props: {
       project: project.projects[0],
       summary: await serialize(he.decode(project.projects[0].summary)),
+      fourProjects,
     },
   }
 }
 
-export default function ProjectPage({ project, summary }) {
-  console.log(project)
+export default function ProjectPage({ project, summary, fourProjects }) {
+  // console.log(project)
+  // console.log(fourProjects)
 
   return (
     <Layout title={project.title}>
@@ -388,38 +392,40 @@ export default function ProjectPage({ project, summary }) {
                 </h1>
               </div>
               <div className="w-full items-center grid xl:grid-cols-4 md:grid-cols-3 grid-cols-2 xl:gap-x-6 xl:gap-y-6 gap-x-4 md:gap-x-6 mt-0 xl:mt-0 gap-y-4 md:gap-y-6">
-                <div className=" flex flex-col justify-between items-start p-3 md:p-6 bg-gray-800 rounded">
-                  <div className="w-full">
-                    <div className="flex justify-center items-center w-full">
-                      <img
-                        className="w-full"
-                        src={
-                          'https://cdn.tuk.dev/assets/templates/portfolio/rectangle.png'
-                        }
-                        alt="spider-web"
-                      />
+                {fourProjects.projects.map((project) => (
+                  <div
+                    key={project.slug}
+                    className=" flex flex-col justify-between items-start p-3 md:p-6 bg-gray-800 rounded">
+                    <div className="w-full">
+                      <div className="flex justify-center items-center w-full">
+                        <img
+                          className="w-full"
+                          src={project.image.url}
+                          alt="spider-web"
+                        />
+                      </div>
+                      <div className="md:mt-6 mt-4">
+                        <p className="text-xs font-medium leading-3 text-white">
+                          {project.category}
+                        </p>
+                      </div>
+                      <div className="md:mt-4 mt-2">
+                        <p className=" text-base md:text-2xl font-semibold text-white">
+                          {project.title}
+                        </p>
+                      </div>
                     </div>
-                    <div className="md:mt-6 mt-4">
-                      <p className="text-xs font-medium leading-3 text-white">
-                        JAVASCRIPT
-                      </p>
-                    </div>
-                    <div className="md:mt-4 mt-2">
-                      <p className=" text-base md:text-2xl font-semibold text-white">
-                        Building an Interactive Showcase with Vue.js & Vue
-                        InstantSearch{' '}
-                      </p>
+                    <div className="mt-4">
+                      <Link href={`/work/${project.slug}`}>
+                        <a className="cursor-pointer focus:outline-none focus:text-green-400 text-xs leading-3 hover:underline focus:underline text-gray-300">
+                          <p>Go to project</p>
+                        </a>
+                      </Link>
                     </div>
                   </div>
-                  <div className="mt-4">
-                    <a
-                      onClick={() => router.push('/projectInner')}
-                      className="cursor-pointer focus:outline-none focus:text-green-400 text-xs leading-3 hover:underline focus:underline text-gray-300">
-                      <p>Go to project</p>
-                    </a>
-                  </div>
-                </div>
-                <div className=" flex flex-col justify-between items-start h-full p-3 md:p-6 bg-gray-800 rounded">
+                ))}
+
+                {/* <div className=" flex flex-col justify-between items-start h-full p-3 md:p-6 bg-gray-800 rounded">
                   <div className="w-full">
                     <div className="w-full flex justify-center items-center">
                       <img
@@ -508,7 +514,7 @@ export default function ProjectPage({ project, summary }) {
                       <p>Go to project</p>
                     </a>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
