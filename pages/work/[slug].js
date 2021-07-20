@@ -199,9 +199,9 @@ export default function ProjectPage({ project, summary }) {
                 </div>
                 <div className="grid grid-cols-2 mt-6 gap-x-6 gap-y-6">
                   {project.techStack.map((tech, id) => (
-                    <div key={tech.id}>
+                    <div key={id}>
                       <p
-                        key={tech.id}
+                        key={id}
                         className="text-base leading-none text-white capitalize">
                         {tech}
                       </p>
@@ -247,9 +247,9 @@ export default function ProjectPage({ project, summary }) {
                 </div>
                 <div className="grid xl:grid-cols-4 sm:grid-cols-3 grid-cols-2 mt-6 gap-x-6 lg:gap-x-24 gap-y-6">
                   {project.infrastructure.map((i, id) => (
-                    <div key={i.id}>
+                    <div key={id}>
                       <p
-                        key={i.id}
+                        key={id}
                         className="text-base leading-none text-white capitalize">
                         {i}
                       </p>
@@ -329,9 +329,11 @@ export default function ProjectPage({ project, summary }) {
               </p>
             </div>
             <div className="ml-4 mt-8 xl:w-3/5">
-              {<MDXRemote {...summary} />}
-              {/* <ul className="text-base text-white list-disc xl:space-y-6 space-y-4">
-                <li>{<MDXRemote {...summary} />}</li> */}
+              <div className="text-base text-white list-disc xl:space-y-6 space-y-4">
+                {<MDXRemote {...summary} />}
+              </div>
+
+              {/* <ul className="text-base text-white list-disc xl:space-y-6 space-y-4"> */}
               {/* <li>
                   Used the strangler pattern to carry out the digital
                   transformation of the legacy software system.
