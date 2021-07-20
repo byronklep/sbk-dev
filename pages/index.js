@@ -54,7 +54,7 @@ export default function Home({ props, data }) {
                   I am a Full Stack Web Developer from Houston, TX. I currently
                   work as a freelance developer but have experience working for
                   local small businesses and startups. I have a passion for tech
-                  and want to help you with your next project!
+                  and want to help you build your next project!
                 </p>
               </div>
               <div className="mt-12 border-b border-transparent ">
@@ -249,9 +249,9 @@ export default function Home({ props, data }) {
                   <div className="md:w-32 w-16">
                     <Image
                       src="/images/partners/mhp-logo-white.png"
-                      alt="Hackmania"
+                      alt="MH Photography"
                       height={80}
-                      width={120}
+                      width={150}
                     />
                     {/* <svg
                       viewBox="0 0 63 59"
@@ -467,10 +467,9 @@ export default function Home({ props, data }) {
               </div>
               <div className="mt-8  ">
                 <p className="text-base leading-normal text-gray-400 ">
-                  I am a Web Developer located in Hartford, Connecticut. I
-                  currently work as a part time Remote Junior Web Developer for
-                  Coolor, located in Las Vegas. It is a long established fact
-                  that a reader will be distracted by the readable content{' '}
+                  Staying up to date with the latest wev development trends and
+                  best practices is something I am passionate about. Check out
+                  some of my latest works.
                 </p>
               </div>
               <div className="mt-8 flex justify-end">
