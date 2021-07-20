@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 export default function Project() {
   return (
     <>
@@ -24,11 +26,11 @@ export default function Project() {
           </div>
         </div>
         <div className="mt-4">
-          <a
-            onClick={() => router.push('/projectInner')}
-            className="cursor-pointer focus:outline-none focus:underline text-xs leading-3 hover:underline focus:underline text-gray-300">
-            <p className="">Go to project</p>
-          </a>
+          <Link href={`/work/${project.slug}`}>
+            <a className="cursor-pointer focus:outline-none focus:underline text-xs leading-3 hover:underline focus:underline text-gray-300">
+              <p className="">Go to project</p>
+            </a>
+          </Link>
         </div>
       </div>
     </>

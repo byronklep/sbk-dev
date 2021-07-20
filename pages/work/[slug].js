@@ -410,9 +410,13 @@ export default function ProjectPage({ project, summary, fourProjects }) {
                         </p>
                       </div>
                       <div className="md:mt-4 mt-2">
-                        <p className=" text-base md:text-2xl font-semibold text-white">
-                          {project.title}
-                        </p>
+                        <Link href={project.slug}>
+                          <a>
+                            <p className=" text-base md:text-2xl font-semibold text-white">
+                              {project.title}
+                            </p>
+                          </a>
+                        </Link>
                       </div>
                     </div>
                     <div className="mt-4">

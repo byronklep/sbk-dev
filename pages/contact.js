@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { useRouter } from 'next/router'
 import Layout from '../components/Layout'
+import ContactHeader from '../components/ContactHeader'
 
 export default function Contact() {
   const [dropDown, setDropDown] = useState(false)
@@ -14,7 +15,9 @@ export default function Contact() {
 
   return (
     <Layout title="Contact Sam Klepper">
-      <section className="bg-gray-900 dark:bg-gray-900 lg:py-12 lg:flex lg:justify-center">
+      <ContactHeader />
+
+      {/* <section className="bg-gray-900 dark:bg-gray-900 lg:py-12 lg:flex lg:justify-center">
         <div className="bg-gray-900 dark:bg-gray-800 lg:mx-8 lg:flex lg:max-w-5xl lg:shadow-lg lg:rounded-lg">
           <div className="lg:w-1/2">
             <div
@@ -46,7 +49,7 @@ export default function Contact() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <section id="contact" className="mt-36">
         <div className="mx-auto container px-6 lg:px-14 xl:px-0">

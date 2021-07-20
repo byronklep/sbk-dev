@@ -1,13 +1,17 @@
-import Layout from '../components/Layout'
-import Profile from '../components/Profile'
-import AboutHeader from '../components/AboutHeader'
+import Layout from '../../components/Layout'
+import Profile from '../../components/Profile'
+import AboutHeader from '../../components/AboutHeader'
+import AboutContent from '../../components/AboutContent'
+import SimpleSlider from '../../components/SimpleSlider'
 
 export default function about() {
   return (
     <Layout title="About Sam Klepper">
-      {/* <AboutHeader /> */}
-      <Profile />
-      <section className="bg-dark-gray-900 dark:bg-gray-800">
+      <AboutHeader />
+      {/* <Profile /> */}
+
+      <AboutContent />
+      <section className="bg-white rounded-lg shadow mx-8 my-10">
         <div className="container px-6 py-8 mx-auto">
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
             <div>
@@ -26,11 +30,11 @@ export default function about() {
                 />
               </svg>
 
-              <h1 className="mt-4 text-xl font-semibold text-gray-300 dark:text-white">
+              <h1 className="mt-4 text-xl font-semibold text-gray-900 dark:text-white">
                 Default Taiwindcss Config
               </h1>
 
-              <p className="mt-2 text-gray-400 dark:text-gray-400">
+              <p className="mt-2 text-gray-600 dark:text-gray-400">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 Dignissim fusce tortor, ac sed malesuada blandit. Et mi gravida
                 sem feugiat.
@@ -53,11 +57,11 @@ export default function about() {
                 />
               </svg>
 
-              <h1 className="mt-4 text-xl font-semibold text-gray-300 dark:text-white">
+              <h1 className="mt-4 text-xl font-semibold text-gray-900 dark:text-white">
                 Fully Responsive Components
               </h1>
 
-              <p className="mt-2 text-gray-500 dark:text-gray-400">
+              <p className="mt-2 text-gray-600 dark:text-gray-400">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 Dignissim fusce tortor, ac sed malesuada blandit. Et mi gravida
                 sem feugiat.
@@ -95,11 +99,11 @@ export default function about() {
                 </defs>
               </svg>
 
-              <h1 className="mt-4 text-xl font-semibold text-gray-300 dark:text-white">
+              <h1 className="mt-4 text-xl font-semibold text-gray-900 dark:text-white">
                 RTL Languages Support
               </h1>
 
-              <p className="mt-2 text-gray-500 dark:text-gray-400">
+              <p className="mt-2 text-gray-600 dark:text-gray-400">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 Dignissim fusce tortor, ac sed malesuada blandit. Et mi gravida
                 sem feugiat.
@@ -108,6 +112,7 @@ export default function about() {
           </div>
         </div>
       </section>
+      <SimpleSlider />
     </Layout>
   )
 }
