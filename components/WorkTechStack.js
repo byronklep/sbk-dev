@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import { DotsVerticalIcon } from '@heroicons/react/solid'
 import { FaNodeJs } from 'react-icons/fa'
 import { FaHtml5 } from 'react-icons/fa'
 import { SiCss3 } from 'react-icons/si'
@@ -196,13 +195,6 @@ export default function WorkTechStck() {
               <div className=" flex md:justify-start justify-between item-start flex-row space-x-3 xl:space-x-14 md:space-x-4 border-gray-700 border-b w-full h-full">
                 <div>
                   <button
-                    onClick={() => removeFiter()}
-                    className=" font-medium lg:leading-6 focus:outline-none  pb-2 md:pb-4 xl:pb-2 text-xs md:text-xl xl:text-2xl  pr-2 md:mr-0 border-b-2 xl:border-b-4 border-transparent focus:border-white text-gray-400 hover:text-white focus:text-white">
-                    <p>All</p>
-                  </button>
-                </div>
-                <div>
-                  <button
                     onClick={() => showBackend()}
                     className=" font-medium lg:leading-6 focus:outline-none  pb-2 md:pb-4 xl:pb-2 text-xs md:text-xl xl:text-2xl pr-2 md:mr-0 border-b-2 xl:border-b-4 border-transparent focus:border-white text-gray-400 hover:text-white focus:text-white">
                     <p>Back-end</p>
@@ -229,6 +221,13 @@ export default function WorkTechStck() {
                     <p>Testing</p>
                   </button>
                 </div>
+                <div>
+                  <button
+                    onClick={() => removeFiter()}
+                    className=" font-medium lg:leading-6 focus:outline-none  pb-2 md:pb-4 xl:pb-2 text-xs md:text-xl xl:text-2xl  pr-2 md:mr-0 border-b-2 xl:border-b-4 border-transparent focus:border-white text-gray-400 hover:text-white focus:text-white">
+                    <p>All</p>
+                  </button>
+                </div>
               </div>
             </div>
             <div>
@@ -246,7 +245,7 @@ export default function WorkTechStck() {
                         {stack.icon}
                       </div>
                       <div className="flex-1 flex items-center justify-between border-t border-r border-b border-gray-200 bg-white rounded-r-md truncate">
-                        <div className="flex-1 px-4 py-2 text-sm truncate">
+                        <div className="flex-1 px-4 py-2 text-sm truncate text-center">
                           <a className="text-gray-900 font-medium hover:text-gray-600">
                             {stack.name}
                           </a>
