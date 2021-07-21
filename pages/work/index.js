@@ -6,6 +6,7 @@ import { getProjects } from '../../lib/data'
 import Truncate from 'react-truncate'
 
 import Layout from '../../components/Layout'
+import WorkTechStck from '../../components/WorkTechStack'
 
 export const getStaticProps = async () => {
   const data = await getProjects()
@@ -123,26 +124,6 @@ const Work = ({ projects }) => {
           </h1>
         </div>
         <div className="flex flex-col  justify-center items-center">
-          {/* <div className="xl:hidden flex flex-col justify-start xl:text-right text-left items-right w-full xl:w-80">
-            <div className="">
-              <h1 className="text-6xl   text-white">Work</h1>
-            </div>
-            <div className="mt-8  ">
-              <p className="text-base leading-normal text-gray-400 ">
-                I am a Web Developer located in Hartford, Connecticut. I
-                currently work as a part time Remote Junior Web Developer for
-                Coolor, located in Las Vegas. It is a long established fact that
-                a reader will be distracted by the readable content{' '}
-              </p>
-            </div>
-            <div className="mt-8 ">
-              <a onClick={() => router.push('/work')}>
-                <p className="text-base font-semibold  hover:underline text-white cursor-pointer">
-                  View all work
-                </p>
-              </a>
-            </div>
-          </div> */}
           <div className="w-full items-center grid xl:grid-cols-4 md:grid-cols-3 grid-cols-1 xl:gap-x-6 gap-x-4 md:gap-x-6 mt-8 xl:mt-0 gap-y-4 md:gap-y-0">
             {projects.map((project, slug) => (
               <div
@@ -186,114 +167,34 @@ const Work = ({ projects }) => {
                 </div>
 
                 <div className="mt-4">
-                  <a
-                    onClick={() => router.push('/projectInner')}
-                    className="cursor-pointer focus:outline-none focus:underline text-xs leading-3 hover:underline focus:underline text-gray-300">
-                    <p className="">Go to project</p>
-                  </a>
+                  <Link href={`/work/${project.slug}`}>
+                    <a className="cursor-pointer focus:outline-none focus:underline text-xs leading-3 hover:underline focus:underline text-gray-300">
+                      <p className="">Go to project</p>
+                    </a>
+                  </Link>
                 </div>
               </div>
             ))}
-
-            {/* <div className="w-full xl:w-72 flex flex-col justify-between items-start h-full p-3 md:p-6 bg-gray-800 rounded">
-              <div className="w-full">
-                <div className="w-full">
-                  <img
-                    className="w-full"
-                    src={
-                      'https://cdn.tuk.dev/assets/templates/portfolio/book.png'
-                    }
-                    alt="book"
-                  />
-                </div>
-                <div className="md:mt-6 mt-4">
-                  <p className="text-xs font-medium leading-3 text-white">
-                    JAVASCRIPT
-                  </p>
-                </div>
-                <div className="md:mt-4 mt-2">
-                  <p className="xl:w-60 text-base md:text-2xl font-semibold text-white">
-                    In Defense of Utility-First CSS
-                  </p>
-                </div>
-              </div>
-              <div className="mt-4">
-                <a
-                  onClick={() => router.push('/projectInner')}
-                  className="cursor-pointer focus:outline-none focus:underline text-xs leading-3 hover:underline focus:underline text-gray-300">
-                  <p className="">Go to project</p>
-                </a>
-              </div>
-            </div>
-            <div className="w-full xl:w-72 flex flex-col h-full justify-between items-start p-3 md:p-6 bg-gray-800 rounded">
-              <div className="w-full">
-                <div className="w-full">
-                  <img
-                    className="w-full"
-                    src={
-                      'https://cdn.tuk.dev/assets/templates/portfolio/coding.png'
-                    }
-                    alt="book"
-                  />
-                </div>
-                <div className="md:mt-6 mt-4">
-                  <p className="text-xs font-medium leading-3 text-white">
-                    JAVASCRIPT
-                  </p>
-                </div>
-                <div className="md:mt-4 mt-2">
-                  <p className="xl:w-60 text-base md:text-2xl font-semibold text-white">
-                    Why Javascript Numbers Are Weird (And How to Fix It)
-                  </p>
-                </div>
-              </div>
-              <div className="mt-4">
-                <a
-                  onClick={() => router.push('/projectInner')}
-                  className="cursor-pointer focus:outline-none focus:underline text-xs leading-3 hover:underline focus:underline text-gray-300">
-                  <p className="">Go to project</p>
-                </a>
-              </div>
-            </div> */}
-            {/* <div className="hidden xl:block flex flex-col justify-end text-right items-end w-80">
-              <div className="">
-                <Link href="/work" passHref>
-                  <h1 className="text-6xl font-extrabold  text-white">Work</h1>
-                </Link>
-              </div>
-              <div className="mt-8  ">
-                <p className="text-base leading-normal text-gray-400 ">
-                  I am a Web Developer located in Hartford, Connecticut. I
-                  currently work as a part time Remote Junior Web Developer for
-                  Coolor, located in Las Vegas. It is a long established fact
-                  that a reader will be distracted by the readable content{' '}
-                </p>
-              </div>
-              <div className="mt-8 flex justify-end">
-                <div className="border-b border-transparent hover:border-white">
-                  <a
-                    onClick={() => router.push('/work')}
-                    className="cursor-pointer focus:outline-none  text-base font-bold  text-white">
-                    <p>View all work</p>
-                  </a>
-                </div>
-              </div>
-            </div> */}
           </div>
         </div>
       </section>
 
-      <section className="mt-24">
+      <section className="mt-24 ">
         <div className="container mx-auto px-6 lg:px-14 xl:px-0">
           <div className="flex justify-start items-start flex-col space-y-14">
-            <div className="">
+            <div className="mx-auto">
               <h1 className="xl:text-6xl md:text-5xl text-4xl font-extrabold text-white">
                 Technology stack
               </h1>
             </div>
-            <div className="flex flex-col space-y-4  md:space-y-14">
+            <div className="flex flex-col mx-auto space-y-4  md:space-y-14">
               <div>
                 <div className=" flex md:justify-start justify-between item-start flex-row space-x-3 xl:space-x-14 md:space-x-4 border-gray-700 border-b w-full h-full">
+                  <div>
+                    <button className=" font-medium lg:leading-6 focus:outline-none  pb-2 md:pb-4 xl:pb-2 text-xs md:text-xl xl:text-2xl  pr-2 md:mr-0 border-b-2 xl:border-b-4 border-transparent focus:border-white text-gray-400 hover:text-white focus:text-white">
+                      <p>All</p>
+                    </button>
+                  </div>
                   <div>
                     <button className=" font-medium lg:leading-6 focus:outline-none  pb-2 md:pb-4 xl:pb-2 text-xs md:text-xl xl:text-2xl pr-2 md:mr-0 border-b-2 xl:border-b-4 border-transparent focus:border-white text-gray-400 hover:text-white focus:text-white">
                       <p>Back-end</p>
@@ -316,7 +217,8 @@ const Work = ({ projects }) => {
                   </div>
                 </div>
               </div>
-              <div className="w-full flex justify-center items-center flex-col space-y-6">
+              <WorkTechStck />
+              {/* <div className="w-full flex justify-center items-center flex-col space-y-6">
                 <div className="w-full flex justify-center xl:items-center xl:flex-row flex-col xl:space-x-6 space-y-6 xl:space-y-0 ">
                   <div className="flex xl:flex-row md:space-x-6 space-x-2 ml-2 md:ml-0">
                     <div className="inline-flex items-center justify-start px-4 py-2 bg-gray-800 rounded">
@@ -619,7 +521,7 @@ const Work = ({ projects }) => {
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

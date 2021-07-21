@@ -11,7 +11,9 @@ export default function AboutHeader() {
       <div className="bg-gray-900 pb-32">
         <header className="py-10">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h1 className="text-3xl font-bold text-white">About</h1>
+            <h1 className="md:text-6xl text-5xl font-extrabold  text-white">
+              About
+            </h1>
           </div>
         </header>
       </div>
@@ -129,11 +131,14 @@ export default function AboutHeader() {
                   </div>
                 </div>
                 <div className="flex md:flex-row flex-col">
-                  <div className="mx-auto px-20 bg-gray-100 rounded">
+                  <div className="mx-auto py-5 px-20 bg-gray-100 rounded">
                     <ul className="divide-y divide-gray-400">
                       <li className="py-4">Samuel Klepper</li>
-                      <li className="py-4">2406 W 18th St.</li>
-                      <li className="py-4">Houston, TX 77008</li>
+                      <li className="py-4">
+                        2406 W 18th St.
+                        <br />
+                        Houston, TX 77008
+                      </li>
                       <li className="py-4">713-376-9541</li>
                       <li className="py-4">sam@samklepper.com</li>
                     </ul>
