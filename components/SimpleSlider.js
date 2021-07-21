@@ -57,7 +57,7 @@ export default class SimpleSlider extends Component {
       ],
     }
     return (
-      <div className="text-blue-700 my-20 text-center">
+      <div className="text-blue-700 my-12 text-center">
         <Slider {...settings}>
           <div className="p-2 sm:p-0 flex flex-col">
             <span>

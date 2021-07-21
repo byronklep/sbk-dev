@@ -8,9 +8,8 @@ export default function about() {
   return (
     <Layout title="About Sam Klepper">
       <AboutHeader />
-      {/* <Profile /> */}
+      <SimpleSlider />
 
-      <AboutContent />
       <section className="bg-white rounded-lg shadow mx-8 my-10">
         <div className="container px-6 py-8 mx-auto">
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -112,7 +111,6 @@ export default function about() {
           </div>
         </div>
       </section>
-      <SimpleSlider />
     </Layout>
   )
 }
