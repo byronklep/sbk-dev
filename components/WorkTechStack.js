@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { FaNodeJs } from 'react-icons/fa'
 import { FaHtml5 } from 'react-icons/fa'
 import { SiCss3 } from 'react-icons/si'
@@ -154,13 +154,26 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-export default function WorkTechStck() {
+WorkTechStack.getInitialProps = async () => {
+  return { techStacks }
+}
+
+// console.log(techStacks)
+
+export default function WorkTechStack() {
+  const [techStack, setTechStack] = useState('')
   const [filteredStacks, setfilteredStacks] = useState('')
 
-  var backend = techStacks.filter((e) => e.category === 'backend')
-  var frontend = techStacks.filter((e) => e.category === 'frontend')
-  var infra = techStacks.filter((e) => e.category === 'infrastructure')
-  var test = techStacks.filter((e) => e.category === 'test')
+  console.log(techStacks)
+
+  //   useEffect(() => {
+  //     setTechStack(techStack)
+  //   }, [])
+
+  const backend = techStacks.filter((e) => e.category === 'backend')
+  const frontend = techStacks.filter((e) => e.category === 'frontend')
+  const infra = techStacks.filter((e) => e.category === 'infrastructure')
+  const test = techStacks.filter((e) => e.category === 'test')
 
   function showBackend() {
     setfilteredStacks(backend)

@@ -15,203 +15,187 @@ export default function Contact() {
 
   return (
     <Layout title="Contact Sam Klepper">
-      <ContactHeader />
-
-      {/* <section className="bg-gray-900 dark:bg-gray-900 lg:py-12 lg:flex lg:justify-center">
-        <div className="bg-gray-900 dark:bg-gray-800 lg:mx-8 lg:flex lg:max-w-5xl lg:shadow-lg lg:rounded-lg">
-          <div className="lg:w-1/2">
-            <div
-              className="h-64 bg-cover lg:rounded-lg lg:h-full"
-              style={{
-                backgroundImage:
-                  'url(https://images.unsplash.com/photo-1593642532400-2682810df593?ixlib=rb-1.2.1&ixid=MXwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=750&q=80)',
-              }}></div>
-          </div>
-
-          <div className="max-w-xl px-6 py-12 lg:max-w-5xl lg:w-1/2">
-            <h2 className="text-2xl font-bold text-gray-300 dark:text-white md:text-3xl">
-              Build Your New{' '}
-              <span className="text-indigo-700 dark:text-indigo-400">Idea</span>
-            </h2>
-            <p className="mt-4 text-gray-600 dark:text-gray-400">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem
-              modi reprehenderit vitae exercitationem aliquid dolores ullam
-              temporibus enim expedita aperiam mollitia iure consectetur dicta
-              tenetur, porro consequuntur saepe accusantium consequatur.
-            </p>
+      <div className="min-h-screen bg-gray-50 flex rounded-xl md:my-28 my-12">
+        <div className="flex-1 flex flex-col justify-center py-12 px-4 sm:px-6 lg:flex-none lg:px-20 xl:px-24">
+          <div className="mx-auto w-full max-w-sm lg:w-96">
+            <div>
+              <img
+                className="h-12 w-auto rounded-xl"
+                src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
+                alt="Workflow"
+              />
+              <h2 className="mt-6 text-3xl font-extrabold text-gray-900">
+                Sign in to your account
+              </h2>
+              <p className="mt-2 text-sm text-gray-600">
+                Or{' '}
+                <a
+                  href="#"
+                  className="font-medium text-indigo-600 hover:text-indigo-500">
+                  start your 14-day free trial
+                </a>
+              </p>
+            </div>
 
             <div className="mt-8">
-              <a
-                href="#"
-                className="px-5 py-2 font-semibold text-gray-100 transition-colors duration-200 transform bg-pink-500 rounded-md hover:bg-pink-400">
-                Start Now
-              </a>
-            </div>
-          </div>
-        </div>
-      </section> */}
-
-      <section id="contact" className="mt-36">
-        <div className="mx-auto container px-6 lg:px-14 xl:px-0">
-          <div className="flex xl:flex-row flex-col justify-between item-start">
-            <div className="flex justify-center item-start flex-col">
               <div>
-                <p className="md:text-6xl text-4xl font-extrabold text-white">
-                  Let&apos;s Get In{' '}
-                  <span className="text-indigo-700">Touch</span>
-                </p>
-              </div>
-              <div className="grid grid-cols-2 md:mt-12 mt-6 gap-y-8">
-                <div className="flex flex-col justify-start items-start">
-                  <p className="text-xl md:text-3xl font-bold  text-white">
-                    1000+
+                <div>
+                  <p className="text-sm font-medium text-gray-700">
+                    Sign in with
                   </p>
-                  <p className=" md:mt-4 text-lg md:text-2xl font-light leading-normal text-gray-300">
-                    Projects
-                  </p>
-                </div>
-                <div className="flex flex-col justify-start items-start">
-                  <p className="text-xl md:text-3xl font-bold  text-white">
-                    88%
-                  </p>
-                  <p className=" md:mt-4 text-lg md:text-2xl font-light leading-normal text-gray-300">
-                    Retention
-                  </p>
-                </div>
-                <div className="flex flex-col justify-start items-start">
-                  <p className="text-xl md:text-3xl font-bold  text-white">
-                    90%
-                  </p>
-                  <p className=" md:mt-4 text-lg md:text-2xl font-light leading-normal text-gray-300">
-                    Client retention
-                  </p>
-                </div>
-                <div className="flex flex-col justify-start items-start">
-                  <p className="text-xl md:text-3xl font-bold  text-white">
-                    90,000+
-                  </p>
-                  <p className=" md:mt-4 text-lg md:text-2xl font-light leading-normal text-gray-300">
-                    Users impacted
-                  </p>
-                </div>
-              </div>
-            </div>
 
-            <div className="mt-16 mb-10 sm:w-9/12  xl:mt-0 lg:w-4/5 xl:w-2/5 flex-col bg-gray-800 md:p-10 p-4 flex justify-center items-start space-y-9">
-              <div className="flex justify-center items-center w-full flex-col md:space-y-6 space-y-4">
-                <div className="w-full flex justify-start items-center">
-                  <input
-                    className="focus:ring-2  focus:ring-gray-300 focus:outline-none bg-gray-700  rounded w-full py-3 pl-2 text-base leading-none placeholder:text-gray-300 text-gray-300"
-                    type="text"
-                    placeholder="Your name"
-                  />
-                </div>
-                <div className="w-full flex justify-start items-center">
-                  <input
-                    className="focus:ring-2  focus:ring-gray-300 focus:outline-none bg-gray-700  rounded w-full py-3 pl-2 text-base leading-none placeholder:text-gray-300 text-gray-300"
-                    type="email"
-                    placeholder="Email address"
-                  />
-                </div>
-
-                <div className="w-full relative">
-                  <button
-                    onClick={dropdownHandler}
-                    className="focus:ring-2  focus:ring-gray-300 focus:outline-none w-full flex justify-between items-center bg-gray-700  rounded "
-                    data-menu>
-                    <p className="pl-2  py-3 text-gray-300 text-base ">
-                      {text}
-                    </p>
-                    <div className="cursor-pointer text-white mr-3">
-                      {dropDown ? (
+                  <div className="mt-1 grid grid-cols-3 gap-3">
+                    <div>
+                      <a
+                        href="#"
+                        className="w-full inline-flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm bg-white text-sm font-medium text-gray-500 hover:bg-gray-50">
+                        <span className="sr-only">Sign in with Facebook</span>
                         <svg
-                          id="svg2"
-                          xmlns="http://www.w3.org/2000/svg"
-                          className="icon icon-tabler icon-tabler-chevron-up"
-                          width="20"
-                          height="20"
-                          viewBox="0 0 24 24"
-                          strokeWidth="1.5"
-                          stroke="currentColor"
-                          fill="none"
-                          strokeLinecap="round"
-                          strokeLinejoin="round">
-                          <path stroke="none" d="M0 0h24v24H0z" />
-                          <polyline points="6 15 12 9 18 15" />
+                          className="w-5 h-5"
+                          aria-hidden="true"
+                          fill="currentColor"
+                          viewBox="0 0 20 20">
+                          <path
+                            fillRule="evenodd"
+                            d="M20 10c0-5.523-4.477-10-10-10S0 4.477 0 10c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V10h2.54V7.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V10h2.773l-.443 2.89h-2.33v6.988C16.343 19.128 20 14.991 20 10z"
+                            clipRule="evenodd"
+                          />
                         </svg>
-                      ) : (
-                        <svg
-                          id="svg1"
-                          xmlns="http://www.w3.org/2000/svg"
-                          className=" icon icon-tabler icon-tabler-chevron-up"
-                          width="20"
-                          height="20"
-                          viewBox="0 0 24 24"
-                          strokeWidth="1.5"
-                          stroke="currentColor"
-                          fill="none"
-                          strokeLinecap="round"
-                          strokeLinejoin="round">
-                          <path stroke="none" d="M0 0h24v24H0z" />
-                          <polyline points="6 9 12 15 18 9" />
-                        </svg>
-                      )}
+                      </a>
                     </div>
-                  </button>
-                  {dropDown && (
-                    <ul
-                      onClick={() => setDropDown(false)}
-                      className="transition duration-300  ease-out bg-gray-700 dark:bg-gray-800 shadow rounded mt-2 py-1 w-full absolute">
-                      <li onClick={() => setText('China')}>
-                        {' '}
-                        <a
-                          tabIndex="0"
-                          className=" focus:outline-none focus:text-gray-400  cursor-pointer text-white dark:text-gray-400 dark:hover:text-white hover:bg-indigo-700 hover:text-gray-400 ">
-                          <div className=" px-3 py-3 text-base leading-3 tracking-normal   font-normal">
-                            China
-                          </div>
-                        </a>
-                      </li>
-                      <li onClick={() => setText('America')}>
-                        {' '}
-                        <a
-                          tabIndex="0"
-                          className=" focus:outline-none focus:text-gray-400  cursor-pointer text-white dark:text-gray-400 dark:hover:text-white  hover:bg-indigo-700 hover:text-gray-400 ">
-                          <div className="px-3 py-3 text-base leading-3 tracking-normal  font-normal">
-                            America
-                          </div>
-                        </a>
-                      </li>
-                      <li onClick={() => setText('France')}>
-                        {' '}
-                        <a
-                          tabIndex="0"
-                          className=" focus:outline-none focus:text-gray-400  cursor-pointer text-white dark:text-gray-400 dark:hover:text-white hover:bg-indigo-700 hover:text-gray-400">
-                          <div className=" text-base leading-3 tracking-normal py-3  px-3 font-normal">
-                            France
-                          </div>
-                        </a>
-                      </li>
-                    </ul>
-                  )}
+
+                    <div>
+                      <a
+                        href="#"
+                        className="w-full inline-flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm bg-white text-sm font-medium text-gray-500 hover:bg-gray-50">
+                        <span className="sr-only">Sign in with Twitter</span>
+                        <svg
+                          className="w-5 h-5"
+                          aria-hidden="true"
+                          fill="currentColor"
+                          viewBox="0 0 20 20">
+                          <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84" />
+                        </svg>
+                      </a>
+                    </div>
+
+                    <div>
+                      <a
+                        href="#"
+                        className="w-full inline-flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm bg-white text-sm font-medium text-gray-500 hover:bg-gray-50">
+                        <span className="sr-only">Sign in with GitHub</span>
+                        <svg
+                          className="w-5 h-5"
+                          aria-hidden="true"
+                          fill="currentColor"
+                          viewBox="0 0 20 20">
+                          <path
+                            fillRule="evenodd"
+                            d="M10 0C4.477 0 0 4.484 0 10.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0110 4.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0020 10.017C20 4.484 15.522 0 10 0z"
+                            clipRule="evenodd"
+                          />
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
                 </div>
-                <div className="w-full flex justify-start items-center">
-                  <textarea
-                    className="focus:ring-2 focus:ring-gray-300 focus:outline-none bg-gray-700 resize-none  rounded w-full py-3 px-2 text-base leading-none placeholder:text-gray-300 text-gray-300"
-                    placeholder="Project Description"
-                    cols="30"
-                    rows="5"></textarea>
+
+                <div className="mt-6 relative">
+                  <div
+                    className="absolute inset-0 flex items-center"
+                    aria-hidden="true">
+                    <div className="w-full border-t border-gray-300" />
+                  </div>
+                  <div className="relative flex justify-center text-sm">
+                    <span className="px-2 bg-white text-gray-500">
+                      Or continue with
+                    </span>
+                  </div>
                 </div>
               </div>
-              <div className="w-full border rounded-sm border-white ">
-                <button className="focus:ring-2  focus:ring-gray-300 w-full focus:outline-none focus:text-gray-300  hover:text-gray-300 hover:bg-gray-900 text-base font-medium py-3 leading-none text-white">
-                  <p>Let’s get started on your project</p>
-                </button>
+
+              <div className="mt-6">
+                <form action="#" method="POST" className="space-y-6">
+                  <div>
+                    <label
+                      htmlFor="email"
+                      className="block text-sm font-medium text-gray-700">
+                      Email address
+                    </label>
+                    <div className="mt-1">
+                      <input
+                        id="email"
+                        name="email"
+                        type="email"
+                        autoComplete="email"
+                        required
+                        className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="space-y-1">
+                    <label
+                      htmlFor="password"
+                      className="block text-sm font-medium text-gray-700">
+                      Password
+                    </label>
+                    <div className="mt-1">
+                      <input
+                        id="password"
+                        name="password"
+                        type="password"
+                        autoComplete="current-password"
+                        required
+                        className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center">
+                      <input
+                        id="remember-me"
+                        name="remember-me"
+                        type="checkbox"
+                        className="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded"
+                      />
+                      <label
+                        htmlFor="remember-me"
+                        className="ml-2 block text-sm text-gray-900">
+                        Remember me
+                      </label>
+                    </div>
+
+                    <div className="text-sm">
+                      <a
+                        href="#"
+                        className="font-medium text-indigo-600 hover:text-indigo-500">
+                        Forgot your password?
+                      </a>
+                    </div>
+                  </div>
+
+                  <div>
+                    <button
+                      type="submit"
+                      className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                      Sign in
+                    </button>
+                  </div>
+                </form>
               </div>
             </div>
           </div>
         </div>
-      </section>
+        <div className="hidden lg:block relative w-0 flex-1">
+          <img
+            className="absolute inset-0 h-full w-full object-cover"
+            src="https://images.unsplash.com/photo-1505904267569-f02eaeb45a4c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1908&q=80"
+            alt=""
+          />
+        </div>
+      </div>
     </Layout>
   )
 }

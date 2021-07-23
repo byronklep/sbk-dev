@@ -4,6 +4,7 @@ import { FaGitlab } from 'react-icons/fa'
 import { FaLinkedin } from 'react-icons/fa'
 import { SiReadthedocs } from 'react-icons/si'
 import { MailIcon, PhoneIcon } from '@heroicons/react/solid'
+import AboutTabs from './AboutTabs'
 
 export default function AboutHeader() {
   return (
@@ -131,7 +132,7 @@ export default function AboutHeader() {
                   </div>
                 </div>
                 <div className="flex md:flex-row flex-col">
-                  <div className="mx-auto py-5 px-20 bg-gray-100 rounded">
+                  <div className="mx-auto py-5 px-20 bg-gray-50 rounded mb-8 md:mb-4">
                     <ul className="divide-y divide-gray-400">
                       <li className="py-4">Samuel Klepper</li>
                       <li className="py-4">
@@ -143,21 +144,7 @@ export default function AboutHeader() {
                       <li className="py-4">sam@samklepper.com</li>
                     </ul>
                   </div>
-                  <div className="md:w-3/4 px-5">
-                    <p className="text-xl bold my-3 mx-2 md:mx-6">
-                      Lorem Ipsum
-                    </p>
-                    <p className="md:px-5 mx-2">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Integer nec odio. Praesent libero. Sed cursus ante dapibus
-                      diam. Sed nisi. Nulla quis sem at nibh elementum
-                      imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec
-                      tellus sed augue semper porta. Mauris massa. Vestibulum
-                      lacinia arcu eget nulla. Class aptent taciti sociosqu ad
-                      litora torquent per conubia nostra, per inceptos
-                      himenaeos. Curabitur sodales ligula in libero.{' '}
-                    </p>
-                  </div>
+                  <AboutTabs />
                 </div>
               </div>
             </section>
