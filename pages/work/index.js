@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 import Image from 'next/image'
-import { getProjects } from '../../lib/data'
+import { getProjects, getLanguages } from '../../lib/data'
 import Truncate from 'react-truncate'
 
 import Layout from '../../components/Layout'
@@ -11,14 +11,16 @@ import ContactForm from '../../components/ContactForm'
 
 export const getStaticProps = async () => {
   const data = await getProjects()
+  const dataT = await getLanguages()
   return {
     props: {
       projects: data.projects,
+      languages: dataT.languages,
     },
   }
 }
 
-const Work = ({ projects }) => {
+const Work = ({ projects, languages }) => {
   const [dropDown, setDropDown] = useState(false)
   const [text, setText] = useState('America')
   const [sidebar, setSidebar] = useState(false)
@@ -29,7 +31,7 @@ const Work = ({ projects }) => {
     setDropDown(!dropDown)
   }
 
-  // console.log(projects)
+  console.log(languages)
 
   return (
     <Layout title="My Work">
@@ -126,7 +128,7 @@ const Work = ({ projects }) => {
         </div>
         <div className="flex flex-col  justify-center items-center">
           <div className="w-full items-center grid xl:grid-cols-4 md:grid-cols-3 grid-cols-1 xl:gap-x-6 gap-x-4 md:gap-x-6 mt-8 xl:mt-0 gap-y-4 md:gap-y-0">
-            {projects.map((project, slug) => (
+            {projects.map((project) => (
               <div
                 key={project.slug}
                 className="w-full xl:w-72 flex flex-col justify-between items-start p-3 md:p-6 bg-gray-800 rounded">
@@ -180,7 +182,7 @@ const Work = ({ projects }) => {
         </div>
       </section>
 
-      <WorkTechStack />
+      <WorkTechStack languages={languages} />
 
       <section id="contact" className="mt-36">
         <div className="mx-auto container px-6 lg:px-14 xl:px-0">
@@ -226,9 +228,8 @@ const Work = ({ projects }) => {
                 </div>
               </div>
             </div>
-           
-              <ContactForm />
-       
+
+            <ContactForm />
           </div>
         </div>
       </section>
