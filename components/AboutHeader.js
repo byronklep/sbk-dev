@@ -4,7 +4,8 @@ import { FaGitlab } from 'react-icons/fa'
 import { FaLinkedin } from 'react-icons/fa'
 import { SiReadthedocs } from 'react-icons/si'
 import { MailIcon, PhoneIcon } from '@heroicons/react/solid'
-import AboutTabs from './AboutTabs'
+
+import Tabs from './Tabs'
 
 export default function AboutHeader() {
   return (
@@ -144,7 +145,7 @@ export default function AboutHeader() {
                       <li className="py-4">sam@samklepper.com</li>
                     </ul>
                   </div>
-                  <AboutTabs />
+                  <Tabs />
                 </div>
               </div>
             </section>
