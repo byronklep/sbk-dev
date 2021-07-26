@@ -17,12 +17,12 @@ export default function Footer() {
             </Link>
           </div>
           <div className="text-white flex flex-col md:items-center f-f-l pt-3">
-            <h1 className="text-2xl font-black">Build. Review. Ship.</h1>
+            <h1 className="text-2xl font-black">Create. Review. Deploy.</h1>
 
             <div className="my-6 text-base text-color f-f-l">
               <ul className="md:flex items-center">
                 <Link href="/" passHref>
-                  <li className=" md:mr-6 cursor-pointer text-base hover:text-gray-300 focus:outline-none focus:text-gray-300 font-semibold leading-none text-white text-center">
+                  <li className=" md:mr-5 cursor-pointer text-base hover:text-gray-300 focus:outline-none focus:text-gray-300 font-semibold leading-none text-white text-center">
                     Home
                   </li>
                 </Link>
@@ -44,7 +44,7 @@ export default function Footer() {
               </ul>
             </div>
             <div className="text-sm text-color mb-10 f-f-l text-center">
-              <p> © 2021 SbK</p>
+              <p> © 2021 </p>
             </div>
           </div>
         </div>

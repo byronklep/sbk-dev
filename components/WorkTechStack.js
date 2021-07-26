@@ -13,6 +13,7 @@ const WorkTechStack = ({ languages }) => {
   const frontend = languages.filter((e) => e.category === 'frontend')
   const infra = languages.filter((e) => e.category === 'infrastructure')
   const test = languages.filter((e) => e.category === 'test')
+  const uiux = languages.filter((e) => e.category === 'uiux')
 
   function showBackend() {
     setfilteredLangs(backend)
@@ -27,6 +28,9 @@ const WorkTechStack = ({ languages }) => {
   }
   function showTesting() {
     setfilteredLangs(test)
+  }
+  function showUiUx() {
+    setfilteredLangs(uiux)
   }
 
   function removeFiter() {
@@ -68,6 +72,13 @@ const WorkTechStack = ({ languages }) => {
                 </div>
                 <div>
                   <button
+                    onClick={() => showUiUx()}
+                    className=" font-medium lg:leading-6 focus:outline-none text-left  pb-2 md:pb-4 xl:pb-2 text-xs md:text-xl xl:text-2xl  pr-2 md:mr-0 border-b-2 xl:border-b-4 border-transparent focus:border-white text-gray-400 hover:text-white focus:text-white">
+                    <p>UI/UX</p>
+                  </button>
+                </div>
+                <div>
+                  <button
                     onClick={() => showTesting()}
                     className=" font-medium lg:leading-6 focus:outline-none  pb-2 md:pb-4 xl:pb-2 text-xs md:text-xl xl:text-2xl  pr-2 md:mr-0 border-b-2 xl:border-b-4 border-transparent focus:border-white text-gray-400 hover:text-white focus:text-white">
                     <p>Testing</p>
@@ -94,7 +105,7 @@ const WorkTechStack = ({ languages }) => {
                           lang.bgColor,
                           'flex-shrink-0 flex items-center justify-center w-16 text-white text-sm font-medium rounded-l-md'
                         )}>
-                        <img src={lang.icon.url} />
+                        <img src={lang.icon.url} alt={lang.name} />
                       </div>
                       <div className="flex-1 flex items-center justify-between border-t border-r border-b border-gray-200 bg-white rounded-r-md truncate">
                         <div className="flex-1 px-4 py-2 text-sm truncate text-center">
