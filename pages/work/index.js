@@ -178,12 +178,12 @@ const Work = ({ projects, languages }) => {
           <div className="flex xl:flex-row flex-col justify-between item-start">
             <div className="flex justify-center item-start flex-col">
               <div>
-                <p className="md:text-6xl text-4xl font-extrabold text-white">
+                <p className="md:text-6xl text-4xl font-extrabold text-white text-center md:text-left">
                   By the numbers
                 </p>
               </div>
 
-              <div className="grid grid-cols-2 md:mt-12 mt-6 gap-y-8 mx-auto">
+              <div className="grid grid-cols-1 md:mt-12 mt-6 gap-y-8 mx-auto">
                 <Stats />
               </div>
             </div>

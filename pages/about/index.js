@@ -30,7 +30,7 @@ export default function about() {
               </svg>
 
               <h1 className="mt-4 text-xl font-semibold text-gray-900 dark:text-white">
-                Default Taiwindcss Config
+                Create.
               </h1>
 
               <p className="mt-2 text-gray-600 dark:text-gray-400">
@@ -57,7 +57,7 @@ export default function about() {
               </svg>
 
               <h1 className="mt-4 text-xl font-semibold text-gray-900 dark:text-white">
-                Fully Responsive Components
+                Review.
               </h1>
 
               <p className="mt-2 text-gray-600 dark:text-gray-400">
@@ -99,7 +99,7 @@ export default function about() {
               </svg>
 
               <h1 className="mt-4 text-xl font-semibold text-gray-900 dark:text-white">
-                RTL Languages Support
+                Deploy.
               </h1>
 
               <p className="mt-2 text-gray-600 dark:text-gray-400">

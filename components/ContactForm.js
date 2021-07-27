@@ -73,7 +73,7 @@ export default function ContactForm({ id }) {
               ref={form}
               action="#"
               method="POST"
-              className="space-y-6"
+              className="space-y-6 mb-5"
               onSubmit={handleSubmit}>
               <div>
                 <div className="mt-1">
