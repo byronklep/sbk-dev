@@ -53,7 +53,7 @@ export default function Contact({ id }) {
                   transition={{ duration: 0.7 }}
                   className="flex justify-center w-full md:max-w-xl">
                   <p className="text-center text-gray-700 bg-green-300 font-bold shadow-xl rounded-xl w-40 h-14 p-4">
-                    ¡Sent!{' '}
+                    Sent!{' '}
                     <span role="img" aria-label="thumb">
                       👍 &nbsp;
                     </span>
