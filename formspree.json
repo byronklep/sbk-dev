@@ -1,0 +1,13 @@
+{
+  "forms": {
+    "contactForm": {
+      "name": "Next Portfolio",
+      "actions": [
+        {
+          "type": "email",
+          "to": "sam@samklepper.com"
+        }
+      ]
+    }
+  }
+}
