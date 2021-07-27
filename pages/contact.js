@@ -156,10 +156,6 @@ export default function Contact({ id }) {
   )
 }
 
-/* 
-  Custom modal using a React Portal 
-  for success message after submit
-*/
 const Modal = ({ id, children }) => {
   const target = usePortal(id)
 

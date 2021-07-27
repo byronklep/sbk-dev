@@ -21,16 +21,6 @@ export const getStaticProps = async () => {
 }
 
 const Work = ({ projects, languages }) => {
-  const [dropDown, setDropDown] = useState(false)
-  const [text, setText] = useState('America')
-  const [sidebar, setSidebar] = useState(false)
-
-  const router = useRouter()
-
-  const dropdownHandler = () => {
-    setDropDown(!dropDown)
-  }
-
   console.log(languages)
 
   return (
@@ -196,7 +186,7 @@ const Work = ({ projects, languages }) => {
               <div className="grid grid-cols-2 md:mt-12 mt-6 gap-y-8">
                 <div className="flex flex-col justify-start items-start">
                   <p className="text-xl md:text-3xl font-bold  text-white">
-                    1000+
+                    100+
                   </p>
                   <p className=" md:mt-4 text-lg md:text-2xl font-light leading-normal text-gray-300">
                     Projects
@@ -220,7 +210,7 @@ const Work = ({ projects, languages }) => {
                 </div>
                 <div className="flex flex-col justify-start items-start">
                   <p className="text-xl md:text-3xl font-bold  text-white">
-                    90,000+
+                    50,000+
                   </p>
                   <p className=" md:mt-4 text-lg md:text-2xl font-light leading-normal text-gray-300">
                     Users impacted
