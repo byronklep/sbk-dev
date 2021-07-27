@@ -1,10 +1,14 @@
-import { useState, useEffect, useRef } from 'react'
+import { useEffect, useRef } from 'react'
+import { createPortal } from 'react-dom'
+import { motion } from 'framer-motion'
+import usePortal from '../utils/usePortal'
 import Image from 'next/image'
 import Layout from '../components/Layout'
 import { useForm, ValidationError } from '@formspree/react'
 
-export default function Contact() {
+export default function Contact({ id }) {
   const [state, handleSubmit] = useForm('contactForm')
+
   const form = useRef(null)
 
   useEffect(() => {
@@ -31,21 +35,47 @@ export default function Contact() {
               </h2>
             </div>
 
-            {/*  */}
+            {state.succeeded ? (
+              <Modal id={id}>
+                <motion.div
+                  initial="pageInitial"
+                  animate="pageAnimate"
+                  variants={{
+                    pageInitial: {
+                      opacity: 0,
+                      translateY: '-35rem',
+                    },
+                    pageAnimate: {
+                      opacity: 1,
+                      translateY: '-38rem',
+                    },
+                  }}
+                  transition={{ duration: 0.7 }}
+                  className="flex justify-center w-full md:max-w-xl">
+                  <p className="text-center text-gray-700 bg-green-300 font-bold shadow-xl rounded-xl w-40 h-14 p-4">
+                    ¡Sent!{' '}
+                    <span role="img" aria-label="thumb">
+                      👍 &nbsp;
+                    </span>
+                    <span role="img" aria-label="party">
+                      🎉
+                    </span>
+                  </p>
+                </motion.div>
+              </Modal>
+            ) : (
+              <></>
+            )}
 
             <div className="mt-8">
-              <div className="mt-6">
+              <div id="grid-parent" className="mt-6">
                 <form
+                  ref={form}
                   action="#"
                   method="POST"
                   className="space-y-6"
                   onSubmit={handleSubmit}>
                   <div>
-                    <label
-                      htmlFor="name"
-                      className="ml-px pl-4 block text-sm font-medium text-gray-700">
-                      Name
-                    </label>
                     <div className="mt-1">
                       <input
                         type="text"
@@ -63,11 +93,6 @@ export default function Contact() {
                   </div>
 
                   <div>
-                    <label
-                      htmlFor="email"
-                      className="ml-px pl-4 block text-sm font-medium text-gray-700">
-                      Email
-                    </label>
                     <div className="mt-1">
                       <input
                         type="email"
@@ -83,6 +108,15 @@ export default function Contact() {
                       />
                     </div>
                   </div>
+                  <label htmlFor="phone" className="px-4 py-2">
+                    <input
+                      name="Phone"
+                      id="phone"
+                      type="text"
+                      className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 px-4 rounded-full"
+                      placeholder="Phone Number"
+                    />
+                  </label>
                   <div>
                     <textarea
                       className="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none"
@@ -120,4 +154,14 @@ export default function Contact() {
       </div>
     </Layout>
   )
+}
+
+/* 
+  Custom modal using a React Portal 
+  for success message after submit
+*/
+const Modal = ({ id, children }) => {
+  const target = usePortal(id)
+
+  return createPortal(children, target)
 }
