@@ -7,6 +7,7 @@ import ContactForm from '../components/ContactForm'
 import PartnerSlider from '../components/PartnerSlider'
 import Link from 'next/link'
 import Truncate from 'react-truncate'
+import Stats from '../components/Stats'
 
 export const getStaticProps = async () => {
   const data = await getProjectsHome()
@@ -210,39 +211,9 @@ export default function Home({ props, data }) {
                   By the numbers
                 </p>
               </div>
-              <div className="grid grid-cols-2 md:mt-12 mt-6 gap-y-8">
-                <div className="flex flex-col justify-start items-start">
-                  <p className="text-xl md:text-3xl font-bold  text-white">
-                    100+
-                  </p>
-                  <p className=" md:mt-4 text-lg md:text-2xl font-light leading-normal text-gray-300">
-                    Projects
-                  </p>
-                </div>
-                <div className="flex flex-col justify-start items-start">
-                  <p className="text-xl md:text-3xl font-bold  text-white">
-                    88%
-                  </p>
-                  <p className=" md:mt-4 text-lg md:text-2xl font-light leading-normal text-gray-300">
-                    Retention
-                  </p>
-                </div>
-                <div className="flex flex-col justify-start items-start">
-                  <p className="text-xl md:text-3xl font-bold  text-white">
-                    90%
-                  </p>
-                  <p className=" md:mt-4 text-lg md:text-2xl font-light leading-normal text-gray-300">
-                    Client retention
-                  </p>
-                </div>
-                <div className="flex flex-col justify-start items-start">
-                  <p className="text-xl md:text-3xl font-bold  text-white">
-                    50,000+
-                  </p>
-                  <p className=" md:mt-4 text-lg md:text-2xl font-light leading-normal text-gray-300">
-                    Users impacted
-                  </p>
-                </div>
+
+              <div className="grid grid-cols-2 md:mt-12 mt-6 gap-y-8 mx-auto">
+                <Stats />
               </div>
             </div>
 

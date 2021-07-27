@@ -1,5 +1,4 @@
-import { useState } from 'react'
-import { useRouter } from 'next/router'
+import Stats from '../../components/Stats'
 import Link from 'next/link'
 import Image from 'next/image'
 import { getProjects, getLanguages } from '../../lib/data'
@@ -174,7 +173,7 @@ const Work = ({ projects, languages }) => {
 
       <WorkTechStack languages={languages} />
 
-      <section id="contact" className="mt-36">
+      <section id="contact" className="mt-36 md:mb-12 mb-10">
         <div className="mx-auto container px-6 lg:px-14 xl:px-0">
           <div className="flex xl:flex-row flex-col justify-between item-start">
             <div className="flex justify-center item-start flex-col">
@@ -183,39 +182,9 @@ const Work = ({ projects, languages }) => {
                   By the numbers
                 </p>
               </div>
-              <div className="grid grid-cols-2 md:mt-12 mt-6 gap-y-8">
-                <div className="flex flex-col justify-start items-start">
-                  <p className="text-xl md:text-3xl font-bold  text-white">
-                    100+
-                  </p>
-                  <p className=" md:mt-4 text-lg md:text-2xl font-light leading-normal text-gray-300">
-                    Projects
-                  </p>
-                </div>
-                <div className="flex flex-col justify-start items-start">
-                  <p className="text-xl md:text-3xl font-bold  text-white">
-                    88%
-                  </p>
-                  <p className=" md:mt-4 text-lg md:text-2xl font-light leading-normal text-gray-300">
-                    Retention
-                  </p>
-                </div>
-                <div className="flex flex-col justify-start items-start">
-                  <p className="text-xl md:text-3xl font-bold  text-white">
-                    90%
-                  </p>
-                  <p className=" md:mt-4 text-lg md:text-2xl font-light leading-normal text-gray-300">
-                    Client retention
-                  </p>
-                </div>
-                <div className="flex flex-col justify-start items-start">
-                  <p className="text-xl md:text-3xl font-bold  text-white">
-                    50,000+
-                  </p>
-                  <p className=" md:mt-4 text-lg md:text-2xl font-light leading-normal text-gray-300">
-                    Users impacted
-                  </p>
-                </div>
+
+              <div className="grid grid-cols-2 md:mt-12 mt-6 gap-y-8 mx-auto">
+                <Stats />
               </div>
             </div>
 
