@@ -46,9 +46,8 @@ const Work = ({ projects, languages }) => {
                 </div>
                 <div className="mt-2 md:mt-4 ">
                   <p className="text-base leading-normal text-gray-300 ">
-                    It is a long established fact that a reader will be
-                    distracted by the readable content for remote Junior Web
-                    Developer for Coolor, located in Las Vegas
+                    When we needed a website fast, SbK dev delivered what we
+                    needed in the time we needed it.
                   </p>
                 </div>
                 <div className="mt-3 md:mt-6">
@@ -63,7 +62,9 @@ const Work = ({ projects, languages }) => {
                     </svg>
 
                     <p className="text-base leading-none text-gray-400">
-                      Schinner Systems
+                      Xavier
+                      <br />
+                      Ultra Demolition
                     </p>
                   </div>
                 </div>
@@ -71,19 +72,19 @@ const Work = ({ projects, languages }) => {
               <div className="px-8 py-10 mt-4 bg-gray-800 flex  justify-start items-start flex-col rounded">
                 <div className="">
                   <p className="text-xs font-medium leading-3 text-white">
-                    JAVASCRIPT
+                    BRANDING
                   </p>
                 </div>
                 <div className="md:mt-2">
                   <p className="text-2xl md:text-3xl font-semibold lg:leading-7  text-white">
-                    Building an MVP in react
+                    Building a Brand
                   </p>
                 </div>
                 <div className="mt-2 md:mt-4 ">
                   <p className="text-base leading-normal text-gray-300 ">
-                    It is a long established fact that a reader will be
-                    distracted by the readable content for remote Junior Web
-                    Developer for Coolor, located in Las Vegas
+                    I approached SbK dev with only a rough idea in mind and they
+                    helped me bring my idea to life with a logo and a unique
+                    design.
                   </p>
                 </div>
                 <div className="mt-3 md:mt-6">
@@ -99,7 +100,8 @@ const Work = ({ projects, languages }) => {
 
                     <p className="text-base leading-none text-gray-400">
                       {' '}
-                      Casper LLC
+                      Martha DeLeon <br />
+                      DSS
                     </p>
                   </div>
                 </div>
