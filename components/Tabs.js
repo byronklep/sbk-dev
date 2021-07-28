@@ -94,7 +94,7 @@ const Tabs = ({ color }) => {
                       <Image
                         className="items-center"
                         src="https://via.placeholder.com/150"
-                        height={300}
+                        height={400}
                         width={500}
                         alt=""
                       />
@@ -105,42 +105,38 @@ const Tabs = ({ color }) => {
                   <div className="grid md:grid-cols-3 gap-2">
                     <div className="mx-auto p-5 md:p-2">
                       <p>
-                        Collaboratively administrate empowered markets via
-                        plug-and-play networks. Dynamically procrastinate B2C
-                        users after installed base benefits.
+                        After High School, I started attending HCC and
+                        eventually graduated with an Associates in Graphic
+                        Design. Though, I did not do much professionally with
+                        that degree, the skill has shown to be an invaluable
+                        asset in my arsenal of web development tools.
                         <br />
                         <br />
-                        Class aptent taciti sociosqu ad litora torquent per
-                        conubia nostra, per inceptos himenaeos. Curabitur
-                        sodales ligula in libero. Sed dignissim lacinia nunc.
-                        Curabitur tortor. Class aptent taciti sociosqu ad litora
-                        torquent per conubia nostra, per inceptos himenaeos.
-                        Curabitur sodales ligula in libero. Sed dignissim
-                        lacinia nunc. Curabitur tortor.
+                        Eventually, after life had taken me down its own path, I
+                        arrived at a place where I felt like I wanted more
+                        professionally. By this time, I was working as an
+                        Administrative Clerk but wanted to do something more
+                        creative and intellectually stimulating.
                       </p>
                     </div>
-                    <div className="mx-auto">
+                    <div className="m-auto">
                       <Image
                         src="https://via.placeholder.com/150"
-                        height={200}
+                        height={400}
                         width={500}
                         alt=""
                       />
                     </div>
                     <div className="mx-auto p-5 md:p-2">
                       <p>
-                        Collaboratively administrate empowered markets via
-                        plug-and-play networks. Dynamically procrastinate B2C
-                        users after installed base benefits.
-                        <br />
-                        <br />
-                        Class aptent taciti sociosqu ad litora torquent per
-                        conubia nostra, per inceptos himenaeos. Curabitur
-                        sodales ligula in libero. Sed dignissim lacinia nunc.
-                        Curabitur tortor. Class aptent taciti sociosqu ad litora
-                        torquent per conubia nostra, per inceptos himenaeos.
-                        Curabitur sodales ligula in libero. Sed dignissim
-                        lacinia nunc. Curabitur tortor.
+                        So I enrolled in Digital Crafts coding bootcamp and have
+                        not looked back since! After a rigorous six week long
+                        curriculum of the journey from HTML to React, and
+                        everything in between— I came out the other side
+                        prepared and able to build whatever the client may need
+                        and up to par with industry standards. Soon enough, I
+                        was offering my skills freelance and even worked a brief
+                        amount of time as a Lead Frontend Developer at Edge196.
                       </p>
                     </div>
                   </div>
@@ -148,28 +144,26 @@ const Tabs = ({ color }) => {
               </div>
               <div className={openTab === 3 ? 'block' : 'hidden'} id="link3">
                 <div className="grid md:grid-cols-2 gap-3">
-                  <div className="mx-auto">
+                  <div className="m-auto">
                     <Image
                       src="https://via.placeholder.com/150"
-                      height={200}
+                      height={400}
                       width={500}
                       alt=""
                     />
                   </div>
                   <div className="mx-auto p-5 md:p-2">
                     <p>
-                      Collaboratively administrate empowered markets via
-                      plug-and-play networks. Dynamically procrastinate B2C
-                      users after installed base benefits.
-                      <br />
-                      <br />
-                      Class aptent taciti sociosqu ad litora torquent per
-                      conubia nostra, per inceptos himenaeos. Curabitur sodales
-                      ligula in libero. Sed dignissim lacinia nunc. Curabitur
-                      tortor. Class aptent taciti sociosqu ad litora torquent
-                      per conubia nostra, per inceptos himenaeos. Curabitur
-                      sodales ligula in libero. Sed dignissim lacinia nunc.
-                      Curabitur tortor.
+                      I have always been fond of creativity in general, so
+                      naturally, I gravitated towards science-fiction novels,
+                      space, art and comic books. These have been life-long
+                      creative catalysts that have only blossomed more as I’ve
+                      aged. Wether it be a break from the seriousness of reality
+                      or an unexpected inspiration, reading stories and creating
+                      art will always be a proper release for me. Also, taking
+                      brief trips into nature with my Rottweiler has become an
+                      important part of rest & relaxation too. Something I try
+                      to do often.
                     </p>
                   </div>
                 </div>
