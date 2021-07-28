@@ -120,7 +120,7 @@ const Work = ({ projects, languages }) => {
             {projects.map((project) => (
               <div
                 key={project.slug}
-                className="w-full xl:w-72 flex flex-col justify-between items-start p-3 md:p-6 bg-gray-800 rounded">
+                className="w-full xl:w-72 flex flex-col justify-between items-start p-3 md:p-6 bg-gray-800 rounded mt-5">
                 <div className="w-full">
                   <div className="w-full">
                     <Image
