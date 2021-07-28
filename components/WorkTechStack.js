@@ -109,8 +109,8 @@ const WorkTechStack = ({ languages }) => {
                         <Image
                           src={lang.icon.url}
                           alt={lang.name}
-                          height={lang.icon.height}
-                          width={lang.icon.width}
+                          height={300}
+                          width={350}
                         />
                       </div>
                       <div className="flex-1 flex items-center justify-between border-t border-r border-b border-gray-200 bg-white rounded-r-md truncate">

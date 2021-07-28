@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import Layout from '../../components/Layout'
+import FourSlider from '../../components/FourSlider'
 import { getProject, getProjectSlugs, getProjectsWork } from '../../lib/data'
 import { FaExternalLinkAlt } from 'react-icons/fa'
 import { FaGitlab } from 'react-icons/fa'
@@ -143,11 +144,6 @@ export default function ProjectPage({ project, summary, fourProjects }) {
                 <div className="grid grid-cols-2 mt-6 gap-x-6 gap-y-6">
                   {project.techStack.map((tech, id) => (
                     <div key={id}>
-                      {/* <p
-                        key={id}
-                        className="text-base leading-none text-white capitalize">
-                        {tech}
-                      </p> */}
                       <span
                         key={id}
                         className="inline-flex items-center px-3 py-1 rounded-md text-sm font-medium bg-purple-400 text-gray-900">
@@ -166,11 +162,6 @@ export default function ProjectPage({ project, summary, fourProjects }) {
                 <div className="grid xl:grid-cols-4 sm:grid-cols-3 grid-cols-2 mt-6 gap-x-6 lg:gap-x-24 gap-y-6">
                   {project.infrastructure.map((i, id) => (
                     <div key={id}>
-                      {/* <p
-                        key={id}
-                        className="text-base leading-none text-white capitalize">
-                        {i}
-                      </p> */}
                       <span
                         key={id}
                         className="inline-flex items-center px-3 py-1 rounded-md text-sm font-medium bg-yellow-400 text-gray-5a0">
@@ -207,43 +198,11 @@ export default function ProjectPage({ project, summary, fourProjects }) {
                   More Work
                 </h1>
               </div>
-              <div className="w-full items-center grid xl:grid-cols-4 md:grid-cols-3 grid-cols-2 xl:gap-x-6 xl:gap-y-6 gap-x-4 md:gap-x-6 mt-0 xl:mt-0 gap-y-4 md:gap-y-6">
-                {fourProjects.projects.map((project) => (
-                  <div
-                    key={project.slug}
-                    className=" flex flex-col justify-between items-start p-3 md:p-6 bg-gray-800 rounded">
-                    <div className="w-full">
-                      <div className="flex justify-center items-center w-full">
-                        <img
-                          className="w-full"
-                          src={project.image.url}
-                          alt="spider-web"
-                        />
-                      </div>
-                      <div className="md:mt-6 mt-4">
-                        <p className="text-xs font-medium leading-3 text-white">
-                          {project.category}
-                        </p>
-                      </div>
-                      <div className="md:mt-4 mt-2">
-                        <Link href={project.slug}>
-                          <a>
-                            <p className=" text-base md:text-2xl font-semibold text-white">
-                              {project.title}
-                            </p>
-                          </a>
-                        </Link>
-                      </div>
-                    </div>
-                    <div className="mt-4">
-                      <Link href={`/work/${project.slug}`}>
-                        <a className="cursor-pointer focus:outline-none focus:text-green-400 text-xs leading-3 hover:underline focus:underline text-gray-300">
-                          <p>Go to project</p>
-                        </a>
-                      </Link>
-                    </div>
-                  </div>
-                ))}
+              <div className="w-full items-center grid   grid-cols-1 xl:gap-x-6 xl:gap-y-6 gap-x-4 md:gap-x-6 mt-0 xl:mt-0 gap-y-4 md:gap-y-6">
+                <FourSlider
+                  fourProjects={fourProjects}
+                  key={fourProjects.slug}
+                />
               </div>
             </div>
           </div>
