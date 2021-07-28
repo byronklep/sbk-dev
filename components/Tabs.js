@@ -69,27 +69,32 @@ const Tabs = ({ color }) => {
             <div className="px-4 py-5 flex-auto">
               <div className="tab-content tab-space">
                 <div className={openTab === 1 ? 'block' : 'hidden'} id="link1">
-                  <div className="grid md:grid-cols-2 gap-3">
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-3">
                     <div className="mx-auto p-5 md:p-2">
                       <p>
-                        Collaboratively administrate empowered markets via
-                        plug-and-play networks. Dynamically procrastinate B2C
-                        users after installed base benefits.
+                        I was born in Houston, TX and have lived here for most
+                        of my life. As a kid, I developed a fascination for
+                        technology and an undying curiosity about how it worked.
+                        Of course, there were other interests, like creating art
+                        and reading Spider-Man comic books, that would also help
+                        foster the creative spirit I now use to create websites.
                         <br />
                         <br />
-                        Class aptent taciti sociosqu ad litora torquent per
-                        conubia nostra, per inceptos himenaeos. Curabitur
-                        sodales ligula in libero. Sed dignissim lacinia nunc.
-                        Curabitur tortor. Class aptent taciti sociosqu ad litora
-                        torquent per conubia nostra, per inceptos himenaeos.
-                        Curabitur sodales ligula in libero. Sed dignissim
-                        lacinia nunc. Curabitur tortor.
+                        Upon taking a <strong>WebMastering I</strong> class in
+                        High School, I fell in love with the art of writing code
+                        and programming instructions into a machine. That
+                        combined with creatively styling websites really allowed
+                        me to express myself in a way I did not know was
+                        possible. Soon after, I started using my little bit of
+                        knowledge to help a local non-profit manage their
+                        website.
                       </p>
                     </div>
-                    <div className="mx-auto">
+                    <div className="m-auto ">
                       <Image
+                        className="items-center"
                         src="https://via.placeholder.com/150"
-                        height={200}
+                        height={300}
                         width={500}
                         alt=""
                       />

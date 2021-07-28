@@ -24,7 +24,7 @@ export default function AboutHeader() {
         <div className="max-w-7xl mx-auto pb-12 px-4 sm:px-6 lg:px-8">
           <div className="bg-white rounded-lg shadow px-5 py-6 sm:px-6">
             <section className="bg-white dark:bg-gray-800">
-              <div className="container px-6 py-8 mx-auto">
+              <div className="container  px-6 py-8 mx-auto">
                 <div className="items-center lg:flex">
                   <div className="lg:w-1/2">
                     <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100">
@@ -32,16 +32,17 @@ export default function AboutHeader() {
                     </h2>
 
                     <p className="mt-4 text-gray-600 dark:text-gray-400 lg:max-w-md">
-                      Hi I am Sam , software engineer{' '}
+                      Hello, I am Sam Klepper, software engineer{' '}
                       <a
                         className="font-bold text-indigo-600 dark:text-indigo-400"
                         href="#">
-                        @BakaTeam
+                        @sbkdev
                       </a>{' '}
-                      , Lorem ipsum, dolor sit amet consectetur adipisicing
-                      elit. Illum in sed non alias, fugiat, commodi nemo ut
-                      fugit corrupti dolorem sequi ex veniam consequuntur id,
-                      maiores beatae ipsa omnis aliquam?
+                      , and I have over three years experience working as a
+                      full-stack developer. Wether it be getting your business
+                      off the ground, or developing a brand for your company--
+                      I&apos;ve got the know-how to make it all come to
+                      fruition.
                     </p>
 
                     <div className="flex mt-4 -mx-2">
@@ -98,7 +99,7 @@ export default function AboutHeader() {
                     </div>
                   </div>
                 </div>
-                <div className="pb-5 border-b border-gray-200 sm:flex sm:items-center sm:justify-between my-10">
+                <div className="pb-5 border-b border-gray-200 sm:flex sm:items-center sm:justify-between my-10 ">
                   <h3 className=" text-lg md:text-2xl leading-6 font-medium text-gray-900">
                     Contact Information
                   </h3>
@@ -132,10 +133,10 @@ export default function AboutHeader() {
                     </button>
                   </div>
                 </div>
-                <div className="flex md:flex-row flex-col">
-                  <div className="mx-auto py-5 px-20 bg-gray-50 rounded mb-8 md:mb-4">
-                    <ul className="divide-y divide-gray-400">
-                      <li className="py-4">Samuel Klepper</li>
+                <div className="flex md:flex-row flex-col content-center">
+                  <div className="mx-auto py-5 px-20 bg-gray-50 rounded mb-8 md:mb-4 shadow-xl ">
+                    <ul className="divide-y divide-gray-400 ">
+                      <li className="py-4">Sam Klepper</li>
                       <li className="py-4">
                         2406 W 18th St.
                         <br />
