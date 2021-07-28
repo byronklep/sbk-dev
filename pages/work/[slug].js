@@ -134,7 +134,7 @@ export default function ProjectPage({ project, summary, fourProjects }) {
 
         <section>
           <div className="mx-auto container py-16 border-b border-gray-800 px-6 lg:px-14 xl:px-0">
-            <div className="flex justify-between items-start md:flex-row flex-col gap-y-10 xl:gap-y-0">
+            <div className="flex justify-evenly items-start md:flex-row flex-col gap-y-5 xl:gap-y-0">
               <div className="flex justify-start items-start flex-col">
                 <div>
                   <p className="text-2xl font-bold lg:leading-6 text-white">
