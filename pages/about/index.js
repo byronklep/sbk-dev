@@ -34,8 +34,8 @@ export default function about() {
               </h1>
 
               <p className="mt-2 text-gray-600 dark:text-gray-400">
-                From idea to production ready app— if you’ve got the idea SbK
-                Dev can make it happen!
+                From idea to production ready app— if you’ve got the need to
+                create something SbK Dev can make it happen!
               </p>
             </div>
 
@@ -60,8 +60,8 @@ export default function about() {
               </h1>
 
               <p className="mt-2 text-gray-600 dark:text-gray-400">
-                Always up to date with industry standards and keeping the
-                customer in the loop.
+                Always up to date with industry standards and best practices,
+                all while optimizing for the latest security trends and fixes.
               </p>
             </div>
 
@@ -101,7 +101,8 @@ export default function about() {
               </h1>
 
               <p className="mt-2 text-gray-600 dark:text-gray-400">
-                Tested, secure and running smoothly on the world wide web!
+                Tested, fast, and secure! Deployed to the world wide web using
+                the latest developments in the web dev world.
               </p>
             </div>
           </div>

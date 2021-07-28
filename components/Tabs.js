@@ -107,16 +107,10 @@ const Tabs = ({ color }) => {
                       <p>
                         After High School, I started attending HCC and
                         eventually graduated with an Associates in Graphic
-                        Design. Though, I did not do much professionally with
-                        that degree, the skill has shown to be an invaluable
-                        asset in my arsenal of web development tools.
-                        <br />
-                        <br />
-                        Eventually, after life had taken me down its own path, I
-                        arrived at a place where I felt like I wanted more
-                        professionally. By this time, I was working as an
-                        Administrative Clerk but wanted to do something more
-                        creative and intellectually stimulating.
+                        Design. After working various odd jobs, I eventually
+                        found myself working as an Administrative Clerk but
+                        wanted to do something more creative and intellectually
+                        stimulating.
                       </p>
                     </div>
                     <div className="m-auto">
@@ -131,8 +125,7 @@ const Tabs = ({ color }) => {
                       <p>
                         So I enrolled in Digital Crafts coding bootcamp and have
                         not looked back since! After a rigorous six week long
-                        curriculum of the journey from HTML to React, and
-                        everything in between— I came out the other side
+                        curriculum of the journey from HTML to React-- I came out the other side
                         prepared and able to build whatever the client may need
                         and up to par with industry standards. Soon enough, I
                         was offering my skills freelance and even worked a brief
@@ -179,7 +172,7 @@ const Tabs = ({ color }) => {
 export default function TabsRender() {
   return (
     <>
-      <Tabs color="gray" />
+      <Tabs color="blue" />
     </>
   )
 }

@@ -6,6 +6,7 @@ import { SiReadthedocs } from 'react-icons/si'
 import { MailIcon, PhoneIcon } from '@heroicons/react/solid'
 
 import Tabs from './Tabs'
+import AboutInfo from './AboutInfo'
 
 export default function AboutHeader() {
   return (
@@ -27,17 +28,18 @@ export default function AboutHeader() {
               <div className="container  px-6 py-8 mx-auto">
                 <div className="items-center lg:flex">
                   <div className="lg:w-1/2">
-                    <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100">
+                    <img src="/images/sbk-logo.svg" height={80} width={80} />
+                    {/* <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100">
                       Sam Klepper
-                    </h2>
+                    </h2> */}
 
                     <p className="mt-4 text-gray-600 dark:text-gray-400 lg:max-w-md">
-                      Hello, I am Sam Klepper, software engineer{' '}
+                      Hello, I am Sam Klepper{' '}
                       <a
                         className="font-bold text-indigo-600 dark:text-indigo-400"
                         href="#">
                         @sbkdev
-                      </a>{' '}
+                      </a>
                       , and I have over three years experience working as a
                       full-stack developer. Wether it be getting your business
                       off the ground, or developing a brand for your company--
@@ -99,7 +101,10 @@ export default function AboutHeader() {
                     </div>
                   </div>
                 </div>
-                <div className="pb-5 border-b border-gray-200 sm:flex sm:items-center sm:justify-between my-10 ">
+
+                <AboutInfo />
+
+                {/* <div className="pb-5 border-b border-gray-200 sm:flex sm:items-center sm:justify-between my-10 ">
                   <h3 className=" text-lg md:text-2xl leading-6 font-medium text-gray-900">
                     Contact Information
                   </h3>
@@ -132,10 +137,11 @@ export default function AboutHeader() {
                       <span>Resume</span>
                     </button>
                   </div>
-                </div>
-                <div className="flex md:flex-row flex-col content-center">
+                </div> */}
+
+                {/* <div className="flex md:flex-row flex-col content-center">
                   <div className="mx-auto py-5 px-20 bg-gray-50 rounded mb-8 md:mb-4 shadow-xl ">
-                    <ul className="divide-y divide-gray-400 ">
+                    <ul className="divide-y divide-gray-400  md:mt-32">
                       <li className="py-4">Sam Klepper</li>
                       <li className="py-4">
                         2406 W 18th St.
@@ -147,7 +153,7 @@ export default function AboutHeader() {
                     </ul>
                   </div>
                   <Tabs />
-                </div>
+                </div> */}
               </div>
             </section>
           </div>
