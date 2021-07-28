@@ -66,7 +66,7 @@ export default function Home({ props, data }) {
             <div className="flex items-center justify-center w-full h-96 lg:w-1/2">
               <Image
                 className="object-cover w-full h-full max-w-2xl rounded-md"
-                src="https://images.unsplash.com/photo-1555181126-cf46a03827c0?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
+                src="/images/sam-home.jpg"
                 height={384}
                 width={672}
                 alt="glasses photo"

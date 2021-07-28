@@ -3,9 +3,6 @@ import { SiGmail } from 'react-icons/si'
 import { FaGitlab } from 'react-icons/fa'
 import { FaLinkedin } from 'react-icons/fa'
 import { SiReadthedocs } from 'react-icons/si'
-import { MailIcon, PhoneIcon } from '@heroicons/react/solid'
-
-import Tabs from './Tabs'
 import AboutInfo from './AboutInfo'
 
 export default function AboutHeader() {
@@ -90,11 +87,11 @@ export default function AboutHeader() {
                   </div>
 
                   <div className="mt-8 lg:mt-0 lg:w-1/2">
-                    <div className="flex items-center justify-center lg:justify-end">
+                    <div className="flex items-center justify-center lg:space-between">
                       <div className="max-w-lg">
                         <img
                           className="object-cover object-center w-full h-64 rounded-md shadow"
-                          src="https://images.unsplash.com/photo-1484399172022-72a90b12e3c1?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80"
+                          src="/images/sam-main.jpg"
                           alt=""
                         />
                       </div>

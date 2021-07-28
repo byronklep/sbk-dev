@@ -19,7 +19,7 @@ export default function Contact({ id }) {
 
   return (
     <Layout title="Contact Sam Klepper">
-      <div className="min-h-screen bg-gray-50 flex rounded-xl md:my-28 my-12">
+      <div className="min-h-screen bg-gray-50 flex rounded-xl md:my-28 my-12 mx-8">
         <div className="flex-1 flex flex-col justify-center py-12 px-4 sm:px-6 lg:flex-none lg:px-20 xl:px-24">
           <div className="mx-auto w-full max-w-sm lg:w-96">
             <div className="flex flex-col">
