@@ -34,9 +34,8 @@ export default function about() {
               </h1>
 
               <p className="mt-2 text-gray-600 dark:text-gray-400">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Dignissim fusce tortor, ac sed malesuada blandit. Et mi gravida
-                sem feugiat.
+                From idea to production ready app— if you’ve got the idea SbK
+                Dev can make it happen!
               </p>
             </div>
 
@@ -61,9 +60,8 @@ export default function about() {
               </h1>
 
               <p className="mt-2 text-gray-600 dark:text-gray-400">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Dignissim fusce tortor, ac sed malesuada blandit. Et mi gravida
-                sem feugiat.
+                Always up to date with industry standards and keeping the
+                customer in the loop.
               </p>
             </div>
 
@@ -103,9 +101,7 @@ export default function about() {
               </h1>
 
               <p className="mt-2 text-gray-600 dark:text-gray-400">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Dignissim fusce tortor, ac sed malesuada blandit. Et mi gravida
-                sem feugiat.
+                Tested, secure and running smoothly on the world wide web!
               </p>
             </div>
           </div>
