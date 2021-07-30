@@ -7,6 +7,7 @@ import Truncate from 'react-truncate'
 import Layout from '../../components/Layout'
 import WorkTechStack from '../../components/WorkTechStack'
 import ContactForm from '../../components/ContactForm'
+import Testimonials from '../../components/Testimonials'
 
 export const getStaticProps = async () => {
   const data = await getProjects()
@@ -24,7 +25,12 @@ const Work = ({ projects, languages }) => {
 
   return (
     <Layout title="My Work">
-      <section className="mt-14">
+      <h1 className="xl:text-6xl md:text-5xl text-4xl font-extrabold  text-white mb-12">
+        Highlights
+      </h1>
+      <Testimonials />
+
+      {/* <section className="mt-14">
         <div className="mx-auto container  px-6 lg:px-14 xl:px-0">
           <div className="flex flex-col justify-center items-start">
             <div className="flex justify-start items-start">
@@ -109,7 +115,7 @@ const Work = ({ projects, languages }) => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <section className="mx-auto container mt-36 px-6 lg:px-14 xl:px-0 ">
         <div className="flex justify-start items-start">
