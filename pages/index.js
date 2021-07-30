@@ -109,18 +109,19 @@ export default function Home({ props, data }) {
             </div>
             <div className="mt-8  ">
               <p className="text-base leading-normal text-gray-400 ">
-                I am a Web Developer located in Hartford, Connecticut. I
-                currently work as a part time Remote Junior Web Developer for
-                Coolor, located in Las Vegas. It is a long established fact that
-                a reader will be distracted by the readable content{' '}
+                Staying up to date with the latest web development trends and
+                best practices is something I am passionate about. Check out
+                some of my latest works.
               </p>
             </div>
             <div className="mt-8 ">
-              <a onClick={() => router.push('/work')}>
-                <p className="text-base font-semibold  hover:underline text-white cursor-pointer">
-                  View all work
-                </p>
-              </a>
+              <Link href="/work" passHref>
+                <a>
+                  <p className="text-base font-semibold  hover:underline text-white cursor-pointer">
+                    View all work
+                  </p>
+                </a>
+              </Link>
             </div>
           </div>
           <div className="w-full items-center grid xl:grid-cols-4 md:grid-cols-3 grid-cols-1 xl:gap-x-6 gap-x-4 md:gap-x-6 mt-16 xl:mt-0 gap-y-4 md:gap-y-0">
@@ -183,18 +184,18 @@ export default function Home({ props, data }) {
               </div>
               <div className="mt-8  ">
                 <p className="text-base leading-normal text-gray-400 ">
-                  Staying up to date with the latest wev development trends and
+                  Staying up to date with the latest web development trends and
                   best practices is something I am passionate about. Check out
                   some of my latest works.
                 </p>
               </div>
               <div className="mt-8 flex justify-end">
                 <div className="border-b border-transparent hover:border-white">
-                  <a
-                    onClick={() => router.push('/work')}
-                    className="cursor-pointer focus:outline-none  text-base font-bold  text-white">
-                    <p>View all work</p>
-                  </a>
+                  <Link href="/work">
+                    <a className="cursor-pointer focus:outline-none  text-base font-bold  text-white">
+                      <p>View all work</p>
+                    </a>
+                  </Link>
                 </div>
               </div>
             </div>
